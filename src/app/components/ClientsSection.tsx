@@ -1,0 +1,91 @@
+import { motion, useInView } from 'motion/react';
+import { useRef } from 'react';
+
+// 15 real client logos uploaded by user
+const logos = [
+  { id: 1, src: '/1.png', alt: 'Gran Melia Hotels & Resorts' },
+  { id: 2, src: '/2.png', alt: 'Swiss-Belhotel International' },
+  { id: 3, src: '/3.png', alt: 'Kristal Hotel' },
+  { id: 4, src: '/4.png', alt: 'Nyu Seoul' },
+  { id: 5, src: '/5.png', alt: 'Indocater' },
+  { id: 6, src: '/6.png', alt: 'Hotel Mulia Senayan' },
+  { id: 7, src: '/7.png', alt: 'Century Park Hotel' },
+  { id: 8, src: '/8.png', alt: 'The FoodHall' },
+  { id: 9, src: '/9.png', alt: 'Mu Gung Hwa' },
+  { id: 10, src: '/10.png', alt: 'Chung Gi Wa' },
+  { id: 11, src: '/11.png', alt: 'JHL Solitaire' },
+  { id: 12, src: '/12.png', alt: 'Grand Hyatt Jakarta' },
+  { id: 13, src: '/13.png', alt: '99 Ranch Market' },
+  { id: 14, src: '/14.png', alt: 'PanganSari' },
+  { id: 15, src: '/15.png', alt: 'Papaya Fresh Gallery' },
+];
+
+const row1 = [...logos.slice(0, 8), ...logos.slice(0, 8)];
+const row2 = [...logos.slice(7, 15), ...logos.slice(7, 15)];
+
+function MarqueeRow({ items, reverse = false }: { items: typeof logos; reverse?: boolean }) {
+  return (
+    <div className="relative overflow-hidden w-full py-4 lg:py-6">
+      <div className="absolute left-0 top-0 bottom-0 w-32 lg:w-[200px] z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #FAFAFA 10%, transparent)' }} />
+      <div className="absolute right-0 top-0 bottom-0 w-32 lg:w-[200px] z-10 pointer-events-none" style={{ background: 'linear-gradient(to left, #FAFAFA 10%, transparent)' }} />
+      <motion.div
+        className="flex gap-12 lg:gap-20 w-max items-center"
+        animate={{ x: reverse ? ['0%', '-50%'] : ['-50%', '0%'] }}
+        transition={{ duration: 40, ease: 'linear', repeat: Infinity }}
+      >
+        {[...items, ...items, ...items, ...items].map((logo, i) => (
+          <div
+            key={`${logo.id}-${i}`}
+            className="flex-shrink-0 w-[180px] lg:w-[280px] h-24 lg:h-32 flex items-center justify-center hover:scale-110 transition-transform duration-500 px-4"
+          >
+            <img
+              src={logo.src}
+              alt={logo.alt}
+              className="w-full h-full object-contain filter "
+              style={{ maxHeight: '100%', maxWidth: '100%' }}
+            />
+          </div>
+        ))}
+      </motion.div>
+    </div>
+  );
+}
+
+export function ClientsSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+
+  return (
+    <section id="clients" className="py-12 lg:py-20 bg-[#FAFAFA] border-y border-[#EAEAEA]" ref={ref}>
+
+      {/* — CLIENT LOGOS — Compact Premium Showcase — */}
+      <div className="max-w-[1440px] mx-auto px-6 lg:px-12 mb-10 lg:mb-16">
+        <motion.div
+          className="flex flex-col items-center justify-center text-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        >
+          <div className="flex items-center gap-4 mb-1">
+            <div className="h-[1px] w-12 bg-[#0071C1]/20" />
+            <p className="text-[11px] uppercase tracking-[0.4em] text-[#0071C1] font-bold">Trusted Network</p>
+            <div className="h-[1px] w-12 bg-[#0071C1]/20" />
+          </div>
+          
+          <h2 className="text-[#1A1A1A] font-bold" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+             Gastronomy Leaders
+          </h2>
+        </motion.div>
+      </div>
+
+      <div className="w-full relative space-y-4">
+        {/* Row 1 */}
+        <MarqueeRow items={row1} reverse={false} />
+
+        {/* Row 2 */}
+        <MarqueeRow items={row2} reverse={true} />
+      </div>
+
+    </section>
+  );
+}
