@@ -103,7 +103,7 @@ export function HeroSection() {
       >
         <div className="w-full h-[500px] lg:h-[850px] relative overflow-hidden bg-gray-100">
           <img 
-            src="/hero.png"
+            src="/hero.webp"
             alt="Premium Raw Beef Purveyor Cipta Bersama Jakarta"
             className="w-full h-full object-cover"
             width={1920}
