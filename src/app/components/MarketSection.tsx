@@ -16,46 +16,40 @@ export function MarketSection() {
     <section className="py-24 lg:py-44 bg-[#FBFBF9] text-[#1A1A1A] relative overflow-hidden" ref={ref}>
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
         
-        <div className="flex flex-col lg:flex-row items-center mb-24 lg:mb-40 relative">
-          
-          <div className="w-full lg:w-1/2 lg:pr-16 z-10 pt-10 lg:pt-0">
-            <motion.div initial={{ opacity: 0, x: -50 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 1, ease: [0.22,1,0.36,1] }}>
-                <div className="border border-[#E5E5E5] bg-white/50 backdrop-blur-sm rounded-full px-5 py-2 inline-flex items-center mb-8">
-                  <span className="text-[14px] font-medium text-[#1A1A1A]">Market Reach</span>
-                </div>
-              <h2 className="font-light text-[#1A1A1A] mb-8" style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', letterSpacing: '-0.03em', lineHeight: 1.1 }}>
-                Supporting the <br/><span className="font-medium text-[#0071C1]">entire F&B ecosystem</span>
-              </h2>
-              <p className="text-[18px] lg:text-[20px] leading-[1.6] text-[#555555] font-light max-w-lg mb-10">
-                We define the supply chain for Indonesia's culinary vanguard.
-              </p>
-              <div className="flex gap-4">
-                <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#1A1A1A] text-white px-8 py-3 rounded-full font-medium text-[15px] hover:bg-[#0071C1] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
-                  Mulai Kemitraan
-                </button>
-                <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="bg-transparent text-[#1A1A1A] border border-[#E5E5E5] px-8 py-3 rounded-full font-medium text-[15px] hover:border-[#1A1A1A] hover:shadow-sm hover:-translate-y-0.5 transition-all duration-300 bg-white/50 backdrop-blur-sm">
-                  Hubungi Kami
-                </button>
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-center mb-24 lg:mb-40">
+          <motion.div initial={{ opacity: 0, x: -50 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 1, ease: [0.22,1,0.36,1] }}>
+              <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center mb-8">
+                <span className="text-[14px] font-medium text-[#1A1A1A]">Market Reach</span>
               </div>
-            </motion.div>
-          </div>
+            <h2 className="font-light text-[#1A1A1A] mb-8" style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', letterSpacing: '-0.03em', lineHeight: 1.1 }}>
+              Supporting the <br/><span className="font-medium text-[#0071C1]">entire F&B ecosystem</span>
+            </h2>
+            <p className="text-[18px] lg:text-[20px] leading-[1.6] text-[#555555] font-light max-w-lg mb-10">
+              We define the supply chain for Indonesia's culinary vanguard.
+            </p>
+            <div className="flex gap-4">
+              <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="bg-[#1A1A1A] text-white px-8 py-3 rounded-full font-medium text-[15px] hover:bg-[#0071C1] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+                Mulai Kemitraan
+              </button>
+              <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="bg-transparent text-[#1A1A1A] border border-[#E5E5E5] px-8 py-3 rounded-full font-medium text-[15px] hover:border-[#1A1A1A] hover:shadow-sm hover:-translate-y-0.5 transition-all duration-300">
+                Hubungi Kami
+              </button>
+            </div>
+          </motion.div>
           
-          <div className="w-full lg:w-1/2 mt-16 lg:mt-0 lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 lg:h-[120%] h-[400px]">
-            <motion.div 
-              className="relative w-full h-full overflow-hidden rounded-[40px] lg:rounded-l-[60px] lg:rounded-r-none shadow-2xl bg-gray-100"
-              initial={{ opacity: 0, scale: 0.95, x: 50 }} 
-              animate={isInView ? { opacity: 1, scale: 1, x: 0 } : {}} 
-              transition={{ duration: 1.2, delay: 0.2 }}
-            >
-              {/* VERIFIED CULINARY IMAGE */}
-              <img 
-                src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=2000" 
-                alt="Culinary Market Reach" 
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-          </div>
-
+          <motion.div 
+            className="relative h-[400px] lg:h-[550px] overflow-hidden rounded-[40px] shadow-2xl bg-gray-100"
+            initial={{ opacity: 0, scale: 0.9 }} 
+            animate={isInView ? { opacity: 1, scale: 1 } : {}} 
+            transition={{ duration: 1.2, delay: 0.2 }}
+          >
+            {/* VERIFIED CULINARY IMAGE */}
+            <img 
+              src="/allMenu.png" 
+              alt="Culinary Market Reach" 
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

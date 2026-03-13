@@ -10,10 +10,30 @@ export function AboutSection() {
       
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-10">
         
-        <div className="grid lg:grid-cols-12 gap-16 lg:gap-32 items-start">
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
           
-          <div className="lg:col-span-12 mt-16 pt-16 border-t border-gray-100">
-            <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
+          <div className="lg:col-span-4 lg:sticky lg:top-32">
+             {/* VERIFIED RAW MEAT IMAGE */}
+             <motion.div 
+               className="relative w-full h-[400px] lg:h-[600px] overflow-hidden rounded-[32px] shadow-2xl bg-[#EBE9E1]" 
+               initial={{ opacity: 0, scale: 0.9 }} 
+               animate={isInView ? { opacity: 1, scale: 1 } : {}} 
+               transition={{ duration: 1.2, delay: 0.4 }}
+             >
+                <img 
+                  src="/introduction.webp" 
+                  alt="Cipta Bersama - Premium Meat Supplier Jakarta" 
+                  className="w-full h-full object-cover"
+                  width={800}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                />
+             </motion.div>
+          </div>
+
+          <div className="lg:col-span-8 mt-10 lg:mt-0">
+            <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
               
               {/* Left Column: Intro & About */}
               <motion.div 
