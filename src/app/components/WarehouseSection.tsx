@@ -27,6 +27,8 @@ export function WarehouseSection() {
           src="/cold storage.png"
           alt="Cipta Bersama Premium Cold Storage Logistics Jakarta"
           className="w-full h-full object-cover opacity-70"
+          width={1920}
+          height={1080}
           loading="lazy"
           decoding="async"
         />

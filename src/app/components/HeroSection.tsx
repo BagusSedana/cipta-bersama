@@ -106,6 +106,8 @@ export function HeroSection() {
             src="/hero.png"
             alt="Premium Raw Beef Purveyor Cipta Bersama Jakarta"
             className="w-full h-full object-cover"
+            width={1920}
+            height={850}
             fetchPriority="high"
             loading="eager"
             decoding="async"

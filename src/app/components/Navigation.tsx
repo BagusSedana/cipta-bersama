@@ -43,8 +43,8 @@ export function Navigation() {
       >
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-16 lg:h-18">
-            <button onClick={() => scrollToSection('home')} className="flex items-center gap-3">
-              <img src="/cb.png" alt="Cipta Bersama Logo" className="h-20 w-auto object-contain" />
+            <button onClick={() => scrollToSection('home')} className="flex items-center gap-3" aria-label="Go to Home">
+              <img src="/cb.png" alt="Cipta Bersama - Premium Meat Supplier Logo" className="h-20 w-auto object-contain" />
             </button>
 
             {/* Desktop Navigation */}
@@ -74,6 +74,8 @@ export function Navigation() {
             <button
               className="lg:hidden p-2 text-[#1A1A1A]"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
             >
               {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>

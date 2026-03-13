@@ -42,6 +42,8 @@ export function AboutSection() {
                   src="/introduction.png" 
                   alt="Cipta Bersama - Premium Meat Supplier Jakarta" 
                   className="w-full h-full object-cover"
+                  width={800}
+                  height={600}
                   loading="lazy"
                   decoding="async"
                 />

@@ -45,10 +45,10 @@ export function Footer() {
           <div className="lg:col-span-4 pr-0 lg:pr-8 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-5 mb-10">
-                <img src="/cb.png" alt="Cipta Bersama Logo" className="h-20 w-auto object-contain brightness-0 invert" />
+                <img src="/cb.png" alt="Cipta Bersama - Premium Meat Supplier Logo" className="h-20 w-auto object-contain brightness-0 invert" />
               </div>
               
-              <p className="text-[16px] leading-[1.8] mb-12 max-w-sm text-gray-500 font-light">
+              <p className="text-[16px] leading-[1.8] mb-12 max-w-sm text-gray-400 font-light">
                 Partner with us to achieve sustainable growth and success. Delivering world-class wholesale premium meat distribution across Indonesia.
               </p>
             </div>
@@ -132,13 +132,13 @@ export function Footer() {
           </p>
           
           <div className="flex items-center gap-4">
-              <a href="https://wa.me/6281294948588" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all">
+              <a href="https://wa.me/6281294948588" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all" aria-label="Contact us on WhatsApp">
                 <Facebook className="w-[18px] h-[18px]" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-[#E1306C] hover:border-[#E1306C] hover:text-white transition-all">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-[#E1306C] hover:border-[#E1306C] hover:text-white transition-all" aria-label="Follow us on Instagram">
                 <Instagram className="w-[18px] h-[18px]" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all">
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all" aria-label="Connect with us on LinkedIn">
                 <Linkedin className="w-[18px] h-[18px]" />
               </a>
           </div>
