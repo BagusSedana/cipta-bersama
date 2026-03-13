@@ -13,9 +13,10 @@ export function WarehouseSection() {
   ];
 
   const facilities = [
-    { icon: Ruler, title: '5,000+ SQM Area', desc: 'Kapasitas penyimpanan raksasa untuk tonase tinggi.' },
-    { icon: Building2, title: 'Cold Storage -18°C', desc: 'Suhu konstan demi mutu premium yang terjaga.' },
-    { icon: Truck, title: 'Central Distribution', desc: 'Armada mandiri, distribusi ke seluruh Nusantara.' },
+    { icon: Building2, title: 'Premium Frozen Meat Supply', desc: 'Providing high-quality frozen meat products with freshness you can trust.' },
+    { icon: Truck, title: 'Cold Chain Delivery', desc: 'Efficient logistic system and modern storage technology to maintain quality.' },
+    { icon: Ruler, title: 'Custom Portion & Individual Ready', desc: 'Serving the specific needs of restaurants, modern markets, cafes, and hotels.' },
+    { icon: MapPin, title: 'Quality & Safety Assurance', desc: 'Strict selection, sorting, and distribution process in accordance with food safety standards.' },
   ];
 
   return (
@@ -69,16 +70,16 @@ export function WarehouseSection() {
           <div className="lg:col-span-5">
             <motion.div className="flex items-center mb-8" initial={{ opacity: 0, x: -30 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8 }}>
               <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center">
-                <span className="text-[14px] font-medium text-[#1A1A1A]">Infrastructure Excellence</span>
+                <span className="text-[14px] font-medium text-[#1A1A1A]">Our Services</span>
               </div>
             </motion.div>
             <motion.h2 className="font-light text-[#1A1A1A] mb-10" style={{ fontSize: 'clamp(3rem, 5.5vw, 5.5rem)', letterSpacing: '-0.04em', lineHeight: 1 }} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 1, delay: 0.2 }}>
-              Nationwide <br />
-              <span className="font-medium text-[#0071C1]">Cold Chain Control</span>
+              Comprehensive <br />
+              <span className="font-medium text-[#0071C1]">Meat Solutions</span>
             </motion.h2>
             <div className="mt-16 pt-16 border-t border-gray-100">
               <p className="text-[18px] lg:text-[20px] leading-[1.8] text-[#555555] font-light">
-                Our facilities utilize high-performance <span className="text-[#1A1A1A] font-medium">Industrial Refrigeration</span> and systematic inventory management to preserve the flavor and integrity of every premium cut.
+                We go beyond supplying premium meats; we partner with your business to provide tailored solutions, from custom portioning to flawless cold-chain delivery.
               </p>
             </div>
           </div>

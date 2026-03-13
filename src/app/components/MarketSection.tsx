@@ -6,10 +6,10 @@ export function MarketSection() {
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
   const sectors = [
-    { name: 'Restaurant', percentage: 35, desc: 'Fine Dining & Casual Cluster' },
-    { name: 'Hotel', percentage: 33, desc: 'International Luxury Hospitality' },
+    { name: 'Restaurant', percentage: 30, desc: 'Fine Dining & Casual Cluster' },
+    { name: 'Hotel', percentage: 35, desc: 'International Luxury Hospitality' },
     { name: 'Cafe', percentage: 20, desc: 'High-Volume Specialty Bistro' },
-    { name: 'Catering', percentage: 12, desc: 'Premium Events & MICE' },
+    { name: 'Catering', percentage: 15, desc: 'Premium Events & MICE' },
   ];
 
   return (

@@ -53,7 +53,7 @@ export function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            We define the standard for premium frozen meat distribution across Indonesia. From artisanal wagyu to exclusive lamb cuts, we deliver excellence to your doorstep.
+            "Cipta Bersama - Committed to Bringing You Frozen Meats of Exceptional Quality and Taste."
           </motion.p>
 
           <motion.div 
