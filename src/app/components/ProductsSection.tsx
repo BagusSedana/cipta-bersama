@@ -1,42 +1,24 @@
 import { motion, useInView, AnimatePresence } from 'motion/react';
-import { useRef, useState } from 'react';
+import { useRef, useState, useCallback } from 'react';
 import { ChevronRight } from 'lucide-react';
 
-// All product images to preload
-const ALL_IMAGES = [
-  '/daging/Tenderloin.png',
-  '/daging/Striploin.png',
-  '/daging/T Bone.png',
-  '/daging/Chuck Eye Roll.png',
-  '/daging/Short Rib.png',
-  '/daging/Sirloin.png',
-  '/daging/Ribeye.png',
-  '/daging/Top Sirloin.png',
-  '/daging/Flat Iron.png',
-  '/daging/Lamb Rack.png',
-  '/daging/Lamb Leg.png',
-  '/daging/Lamb Shoulder.png',
-  '/daging/Lamb Loin.png',
-  '/daging/Lamb Shank.png',
-  '/daging/Lamb Ribs.png',
-  '/daging/Lamb Flap.png',
-  '/daging/Lamb Cube.png',
-  '/daging/Lamb Chops.png',
-  '/daging/Lamb Rump.png',
-  '/daging/Chuck.png',
-  '/daging/Blade.png',
-  '/daging/Rump Steak.png',
-  '/daging/Inter Costal.png',
-  '/daging/Neck.png',
-  '/daging/Shin.png',
-  '/daging/Brisket.png',
-  '/daging/Flank.png',
-  '/daging/Tri Tip.png',
-  '/daging/Knuckle.png',
-  '/daging/Topside.png',
-  '/daging/Silverside.png',
-  '/daging/Rump.png',
-];
+// Preload images for a category on hover — only fetches when user shows intent
+const preloadedCategories = new Set<string>();
+function preloadCategoryImages(items: string[], defaultImage: string) {
+  const key = items[0];
+  if (preloadedCategories.has(key)) return;
+  preloadedCategories.add(key);
+  // Preload default image immediately
+  const img = new Image();
+  img.src = defaultImage;
+  // Preload rest with low priority after a short delay
+  setTimeout(() => {
+    items.forEach(item => {
+      const i = new Image();
+      i.src = `/daging/${item === 'T-Bone' ? 'T Bone' : item}.webp`;
+    });
+  }, 200);
+}
 
 export function ProductsSection() {
   const ref = useRef(null);
@@ -55,26 +37,30 @@ export function ProductsSection() {
       title: 'Our Product',
       subtitle: 'Prime Cut Selection',
       desc: 'Our flagship premium cuts meticulously selected for superior marbling, age, and tenderness. The definitive choice for steakhouse excellence.',
-      image: '/daging/Tenderloin.png',
+      image: '/daging/Tenderloin.webp',
       items: ['Tenderloin', 'Striploin', 'T-Bone', 'Chuck Eye Roll', 'Short Rib', 'Sirloin', 'Ribeye', 'Top Sirloin', 'Flat Iron']
     },
     lamb: {
       title: 'Our Product',
       subtitle: 'Premium Lamb Selection',
       desc: 'Exceptional grass-fed lamb sourced from the pristine pastures of New Zealand and Australia, ensuring a clean flavor profile and unmatched tenderness.',
-      image: '/daging/Lamb Rack.png',
+      image: '/daging/Lamb Rack.webp',
       items: ['Lamb Rack', 'Lamb Leg', 'Lamb Shoulder', 'Lamb Loin', 'Lamb Shank', 'Lamb Ribs', 'Lamb Flap', 'Lamb Cube', 'Lamb Chops', 'Lamb Rump']
     },
     secondary: {
       title: 'Our Product',
       subtitle: 'Executive Secondary Cuts',
       desc: 'Versatile and immensely flavorful cuts favored by executive chefs for artisanal slow-roasting, gourmet braising, and signature stock preparations.',
-      image: '/daging/Chuck.png',
+      image: '/daging/Chuck.webp',
       items: ['Chuck', 'Blade', 'Rump Steak', 'Inter Costal', 'Neck', 'Shin', 'Brisket', 'Flank', 'Tri Tip', 'Knuckle', 'Topside', 'Silverside', 'Rump']
     }
   };
 
   const activeData = productData[activeCategory];
+
+  const handleCategoryHover = useCallback((catId: 'prime' | 'lamb' | 'secondary') => {
+    preloadCategoryImages(productData[catId].items, productData[catId].image);
+  }, []);
 
   return (
     <section id="products" className="py-24 lg:py-40 relative bg-[#FFFFFF]" ref={ref}>
@@ -105,6 +91,8 @@ export function ProductsSection() {
                   setActiveCategory(cat.id);
                   setActiveItem(null);
                 }}
+                onMouseEnter={() => handleCategoryHover(cat.id)}
+                onFocus={() => handleCategoryHover(cat.id)}
                 className={`pb-6 text-[14px] font-medium tracking-[0.2em] uppercase transition-all duration-500 border-b-2 relative`}
                 style={{
                   borderColor: activeCategory === cat.id ? '#0071C1' : 'transparent',
@@ -133,9 +121,10 @@ export function ProductsSection() {
                     <span className="text-[12px] uppercase tracking-[0.2em] text-[#1A1A1A] font-medium">Category Highlights</span>
                   </div>
                 </div>
-                <h4 className="text-[40px] lg:text-[52px] font-medium mb-10 text-[#1A1A1A]" style={{ letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+                {/* Use p instead of h4 to fix heading hierarchy */}
+                <p className="text-[40px] lg:text-[52px] font-medium mb-10 text-[#1A1A1A]" style={{ letterSpacing: '-0.02em', lineHeight: 1.1 }}>
                   {activeData.subtitle}
-                </h4>
+                </p>
                 <p className="text-[20px] leading-relaxed text-[#666666] mb-16 max-w-xl font-light" style={{ fontWeight: 300 }}>
                   {activeData.desc}
                 </p>
@@ -152,7 +141,7 @@ export function ProductsSection() {
                   initial="hidden"
                   animate="show"
                 >
-                  {activeData.items.map((item, idx) => (
+                  {activeData.items.map((item) => (
                     <motion.div 
                       key={item} 
                       onClick={() => setActiveItem(item)}
@@ -163,10 +152,11 @@ export function ProductsSection() {
                       whileTap={{ scale: 0.98 }}
                       className={`group flex items-center justify-between py-5 border-b border-gray-100 hover:border-[#1A1A1A] cursor-pointer transition-all duration-300 ${activeItem === item ? 'border-[#1A1A1A]' : ''}`}
                     >
-                      <span className={`text-[17px] font-normal transition-colors duration-300 ${activeItem === item ? 'text-[#1A1A1A]' : 'text-[#888888] group-hover:text-[#1A1A1A]'}`}>
+                      {/* Fixed contrast: #666666 instead of #888888 */}
+                      <span className={`text-[17px] font-normal transition-colors duration-300 ${activeItem === item ? 'text-[#1A1A1A]' : 'text-[#666666] group-hover:text-[#1A1A1A]'}`}>
                         {item}
                       </span>
-                      <ChevronRight className={`w-5 h-5 transition-all duration-300 ${activeItem === item ? 'text-[#1A1A1A] translate-x-1' : 'text-gray-200 group-hover:text-[#1A1A1A] group-hover:translate-x-1'}`} />
+                      <ChevronRight className={`w-5 h-5 transition-all duration-300 ${activeItem === item ? 'text-[#1A1A1A] translate-x-1' : 'text-gray-300 group-hover:text-[#1A1A1A] group-hover:translate-x-1'}`} />
                     </motion.div>
                   ))}
                 </motion.div>
@@ -175,13 +165,6 @@ export function ProductsSection() {
           </div>
 
           <div className="order-2 lg:order-2">
-            {/* Hidden preload: semua gambar di-load di background agar switching instan */}
-            <div aria-hidden="true" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', opacity: 0, pointerEvents: 'none' }}>
-              {ALL_IMAGES.map((src) => (
-                <img key={src} src={src} alt="" width={1} height={1} fetchPriority="low" />
-              ))}
-            </div>
-
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeItem || activeCategory}
@@ -189,15 +172,15 @@ export function ProductsSection() {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2, ease: 'easeOut' }}
-                className="w-full h-[500px] lg:h-[800px] overflow-hidden rounded-3xl bg-[#F6F5F2] flex items-center justify-center p-0 lg:p-0"
+                className="w-full h-[500px] lg:h-[800px] overflow-hidden rounded-3xl bg-[#F6F5F2] flex items-center justify-center"
               >
                 <img
-                  src={activeItem ? `/daging/${activeItem === 'T-Bone' ? 'T Bone' : activeItem}.png` : activeData.image}
+                  src={activeItem ? `/daging/${activeItem === 'T-Bone' ? 'T Bone' : activeItem}.webp` : activeData.image}
                   alt={activeItem || activeData.subtitle}
                   className="w-full h-full object-cover filter drop-shadow-xl hover:scale-110 transition-transform duration-1000 ease-out"
                   width={800}
                   height={800}
-                  decoding="sync"
+                  decoding="async"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = activeData.image;
                   }}

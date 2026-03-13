@@ -45,7 +45,7 @@ export function Footer() {
           <div className="lg:col-span-4 pr-0 lg:pr-8 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-5 mb-10">
-                <img src="/cb.png" alt="Cipta Bersama - Premium Meat Supplier Logo" className="h-20 w-auto object-contain brightness-0 invert" />
+                <img src="/cb.webp" alt="Cipta Bersama - Premium Meat Supplier Logo" className="h-20 w-auto object-contain brightness-0 invert" width={140} height={140} />
               </div>
               
               <p className="text-[16px] leading-[1.8] mb-12 max-w-sm text-gray-400 font-light">
@@ -80,9 +80,9 @@ export function Footer() {
           <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-8 pt-2">
             {footerLinks.map((section) => (
               <div key={section.title}>
-                <h4 className="font-bold text-[11px] mb-8 tracking-[0.2em] uppercase text-gray-500">
+                <p className="font-bold text-[11px] mb-8 tracking-[0.2em] uppercase text-gray-500">
                   {section.title}
-                </h4>
+                </p>
                 <ul className="space-y-4">
                   {section.links.map((link) => (
                     <li key={link.name}>
@@ -101,9 +101,9 @@ export function Footer() {
 
             {/* Contact Direct */}
             <div>
-              <h4 className="font-bold text-[11px] mb-8 tracking-[0.2em] uppercase text-gray-500">
+              <p className="font-bold text-[11px] mb-8 tracking-[0.2em] uppercase text-gray-500">
                 Contact
-              </h4>
+              </p>
               <ul className="space-y-4">
                 <li>
                   <a href="tel:+6281294948588" className="text-[15px] font-light transition-colors text-gray-300 hover:text-white block">

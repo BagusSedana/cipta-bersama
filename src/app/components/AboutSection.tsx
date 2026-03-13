@@ -39,7 +39,7 @@ export function AboutSection() {
                transition={{ duration: 1.2, delay: 0.4 }}
              >
                 <img 
-                  src="/introduction.png" 
+                  src="/introduction.webp" 
                   alt="Cipta Bersama - Premium Meat Supplier Jakarta" 
                   className="w-full h-full object-cover"
                   width={800}

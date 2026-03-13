@@ -89,7 +89,7 @@ export function WarehouseSection() {
                   <fac.icon className="w-7 h-7 text-[#0071C1]" />
                 </div>
                 <div className="pt-2">
-                  <h4 className="text-[20px] lg:text-[24px] font-medium text-[#1A1A1A] mb-4">{fac.title}</h4>
+                  <p className="text-[20px] lg:text-[24px] font-medium text-[#1A1A1A] mb-4">{fac.title}</p>
                   <p className="text-[16px] lg:text-[18px] text-[#666666] leading-relaxed">{fac.desc}</p>
                 </div>
               </motion.div>
@@ -101,6 +101,7 @@ export function WarehouseSection() {
       <div className="w-full h-[50vh] min-h-[400px] border-t border-gray-100 grayscale hover:grayscale-0 transition-all duration-700">
         <iframe 
           src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Jalan%20Raya%20Kavling%20DPR%20No%2049,%20Jakarta,%20Indonesia&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
+          title="Lokasi Gudang Cipta Bersama - Jalan Raya Kavling DPR No 49, Jakarta"
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 

@@ -44,7 +44,7 @@ export function Navigation() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-16 lg:h-18">
             <button onClick={() => scrollToSection('home')} className="flex items-center gap-3" aria-label="Go to Home">
-              <img src="/cb.png" alt="Cipta Bersama - Premium Meat Supplier Logo" className="h-20 w-auto object-contain" />
+              <img src="/cb.png" alt="Cipta Bersama - Premium Meat Supplier Logo" className="h-20 w-auto object-contain" width={140} height={140} />
             </button>
 
             {/* Desktop Navigation */}
