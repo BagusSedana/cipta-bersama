@@ -3,21 +3,21 @@ import { useRef } from 'react';
 
 // 15 real client logos uploaded by user
 const logos = [
-  { id: 1, src: '/1.png', alt: 'Gran Melia Hotels & Resorts' },
-  { id: 2, src: '/2.png', alt: 'Swiss-Belhotel International' },
-  { id: 3, src: '/3.png', alt: 'Kristal Hotel' },
-  { id: 4, src: '/4.png', alt: 'Nyu Seoul' },
-  { id: 5, src: '/5.png', alt: 'Indocater' },
-  { id: 6, src: '/6.png', alt: 'Hotel Mulia Senayan' },
-  { id: 7, src: '/7.png', alt: 'Century Park Hotel' },
-  { id: 8, src: '/8.png', alt: 'The FoodHall' },
-  { id: 9, src: '/9.png', alt: 'Mu Gung Hwa' },
-  { id: 10, src: '/10.png', alt: 'Chung Gi Wa' },
-  { id: 11, src: '/11.png', alt: 'JHL Solitaire' },
-  { id: 12, src: '/12.png', alt: 'Grand Hyatt Jakarta' },
-  { id: 13, src: '/13.png', alt: '99 Ranch Market' },
-  { id: 14, src: '/14.png', alt: 'PanganSari' },
-  { id: 15, src: '/15.png', alt: 'Papaya Fresh Gallery' },
+  { id: 1, src: '/mitra/gran.png', alt: 'Gran Melia Hotels & Resorts' },
+  { id: 2, src: '/mitra/swiss.png', alt: 'Swiss-Belhotel International' },
+  { id: 3, src: '/mitra/kristal.png', alt: 'Kristal Hotel' },
+  { id: 4, src: '/mitra/newseoul.png', alt: 'New Seoul' },
+  { id: 5, src: '/mitra/indocater.png', alt: 'Indocater' },
+  { id: 6, src: '/mitra/mulia.png', alt: 'Hotel Mulia Senayan' },
+  { id: 7, src: '/mitra/century.png', alt: 'Century Park Hotel' },
+  { id: 8, src: '/mitra/food.png', alt: 'The FoodHall' },
+  { id: 9, src: '/mitra/mu.png', alt: 'Mu Gung Hwa' },
+  { id: 10, src: '/mitra/chung.png', alt: 'Chung Gi Wa' },
+  { id: 11, src: '/mitra/solitaire.png', alt: 'JHL Solitaire' },
+  { id: 12, src: '/mitra/grand.png', alt: 'Grand Hyatt Jakarta' },
+  { id: 13, src: '/mitra/ranch.png', alt: '99 Ranch Market' },
+  { id: 14, src: '/mitra/pangan.png', alt: 'PanganSari' },
+  { id: 15, src: '/mitra/papaya.png', alt: 'Papaya Fresh Gallery' },
 ];
 
 const row1 = [...logos.slice(0, 8), ...logos.slice(0, 8)];
