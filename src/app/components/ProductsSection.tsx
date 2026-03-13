@@ -45,7 +45,7 @@ export function ProductsSection() {
       subtitle: 'Premium Lamb Selection',
       desc: 'Exceptional grass-fed lamb sourced from the pristine pastures of New Zealand and Australia, ensuring a clean flavor profile and unmatched tenderness.',
       image: '/daging/Lamb Rack.webp',
-      items: ['Lamb Rack', 'Lamb Leg', 'Lamb Shoulder', 'Lamb Loin', 'Lamb Shank', 'Lamb Ribs', 'Lamb Flap', 'Lamb Cube', 'Lamb Chops', 'Lamb Rump']
+      items: ['Lamb Rack', 'Lamb Leg', 'Lamb Shoulder', 'Lamb Loin', 'Lamb Shank', 'Lamb Ribs', 'Lamb Flap', 'Lamb Chops', 'Lamb Rump']
     },
     secondary: {
       title: 'Our Product',
