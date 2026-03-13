@@ -45,16 +45,7 @@ export function Footer() {
           <div className="lg:col-span-4 pr-0 lg:pr-8 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-5 mb-10">
-                <svg width="48" height="36" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-                  <path d="M 28 8 A 12 12 0 1 0 28 32" stroke="#FFFFFF" strokeWidth="6" strokeLinecap="square" />
-                  <path d="M 18 6 H 38 A 9 9 0 0 1 38 20 H 22" stroke="#8DC63F" strokeWidth="5" strokeLinecap="square" strokeLinejoin="miter" />
-                  <path d="M 18 34 H 40 A 9 9 0 0 0 40 20 H 22" stroke="#8DC63F" strokeWidth="5" strokeLinecap="square" strokeLinejoin="miter" />
-                  <path d="M 18 6 V 34" stroke="#8DC63F" strokeWidth="5" strokeLinecap="square" />
-                </svg>
-                <div className="flex flex-col justify-center leading-[1.1]">
-                  <span className="text-[20px] font-extrabold text-white tracking-[0.05em] uppercase">Cipta</span>
-                  <span className="text-[20px] font-extrabold text-white tracking-[0.05em] uppercase">Bersama</span>
-                </div>
+                <img src="/cb.png" alt="Cipta Bersama Logo" className="h-20 w-auto object-contain brightness-0 invert" />
               </div>
               
               <p className="text-[16px] leading-[1.8] mb-12 max-w-sm text-gray-500 font-light">
@@ -141,11 +132,15 @@ export function Footer() {
           </p>
           
           <div className="flex items-center gap-4">
-            {[Twitter, Facebook, Instagram, Linkedin].map((Icon, idx) => (
-              <a key={idx} href="#" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-white hover:text-black transition-all">
-                <Icon className="w-[18px] h-[18px]" />
+              <a href="https://wa.me/6281294948588" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all">
+                <Facebook className="w-[18px] h-[18px]" />
               </a>
-            ))}
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-[#E1306C] hover:border-[#E1306C] hover:text-white transition-all">
+                <Instagram className="w-[18px] h-[18px]" />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all">
+                <Linkedin className="w-[18px] h-[18px]" />
+              </a>
           </div>
         </div>
 

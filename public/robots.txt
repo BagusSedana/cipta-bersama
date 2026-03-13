@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ciptabersama.co.id/sitemap.xml
+
+# Block bot from crawling irrelevant static assets
+Disallow: /node_modules/
+Disallow: /.git/

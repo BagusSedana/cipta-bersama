@@ -6,6 +6,20 @@ export function ContactSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const name = formData.get('name');
+    const company = formData.get('company');
+    const email = formData.get('email');
+    const phone = formData.get('phone');
+    const message = formData.get('message');
+
+    const whatsappMessage = `Halo Cipta Bersama,%0A%0A*Inquiry Baru dari Website:*%0A%0A*Nama:* ${name}%0A*Perusahaan:* ${company}%0A*Email:* ${email}%0A*No. Telp:* ${phone}%0A%0A*Pesan:*%0A${message}`;
+    
+    window.open(`https://wa.me/6281294948588?text=${whatsappMessage}`, '_blank');
+  };
+
   return (
     <section id="contact" className="py-24 lg:py-32 relative overflow-hidden bg-white text-[#1A1A1A]" ref={ref}>
       
@@ -61,31 +75,31 @@ export function ContactSection() {
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <form className="space-y-16 relative z-10 w-full">
+            <form onSubmit={handleSubmit} className="space-y-16 relative z-10 w-full">
               <div className="grid xl:grid-cols-2 gap-16 xl:gap-12">
                 <div className="relative group">
-                  <input type="text" id="name" required className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent font-light" placeholder="Full Name" />
+                  <input type="text" id="name" name="name" required className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent font-light" placeholder="Full Name" />
                   <label htmlFor="name" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">Full Name</label>
                 </div>
                 <div className="relative group">
-                  <input type="text" id="company" required className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent font-light" placeholder="Company Name" />
+                  <input type="text" id="company" name="company" required className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent font-light" placeholder="Company Name" />
                   <label htmlFor="company" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">Company Name</label>
                 </div>
               </div>
 
               <div className="grid xl:grid-cols-2 gap-16 xl:gap-12">
                 <div className="relative group">
-                  <input type="email" id="email" required className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent font-light" placeholder="Email Address" />
+                  <input type="email" id="email" name="email" required className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent font-light" placeholder="Email Address" />
                   <label htmlFor="email" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">Email Address</label>
                 </div>
                 <div className="relative group">
-                  <input type="tel" id="phone" required className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent font-light" placeholder="Phone Number" />
+                  <input type="tel" id="phone" name="phone" required className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent font-light" placeholder="Phone Number" />
                   <label htmlFor="phone" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">Phone / WhatsApp</label>
                 </div>
               </div>
 
               <div className="relative group pt-4">
-                <textarea id="message" required rows={1} className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent resize-none font-light min-h-[40px]" placeholder="Message"></textarea>
+                <textarea id="message" name="message" required rows={1} className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent resize-none font-light min-h-[40px]" placeholder="Message"></textarea>
                 <label htmlFor="message" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">How can we help you?</label>
               </div>
 

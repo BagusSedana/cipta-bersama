@@ -1,5 +1,4 @@
 import { defineConfig } from 'vite'
-import path from 'path'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
@@ -10,13 +9,28 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  resolve: {
-    alias: {
-      // Alias @ to the src directory
-      '@': path.resolve(__dirname, './src'),
-    },
-  },
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.
   assetsInclude: ['**/*.svg', '**/*.csv'],
+
+  build: {
+    // Use esbuild for faster minification
+    minify: 'esbuild',
+    // Inline assets smaller than 4KB
+    assetsInlineLimit: 4096,
+    // Target modern browsers for smaller bundle
+    target: 'es2020',
+    // Raise chunk size warning limit 
+    chunkSizeWarningLimit: 800,
+    rollupOptions: {
+      output: {
+        // Code splitting: separate vendor and motion chunks
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'motion': ['motion'],
+          'icons': ['lucide-react'],
+        },
+      },
+    },
+  },
 })

@@ -31,18 +31,18 @@ function MarqueeRow({ items, reverse = false }: { items: typeof logos; reverse?:
       <motion.div
         className="flex gap-12 lg:gap-20 w-max items-center"
         animate={{ x: reverse ? ['0%', '-50%'] : ['-50%', '0%'] }}
-        transition={{ duration: 40, ease: 'linear', repeat: Infinity }}
+        transition={{ duration: 120, ease: 'linear', repeat: Infinity }}
       >
         {[...items, ...items, ...items, ...items].map((logo, i) => (
           <div
             key={`${logo.id}-${i}`}
-            className="flex-shrink-0 w-[180px] lg:w-[280px] h-24 lg:h-32 flex items-center justify-center hover:scale-110 transition-transform duration-500 px-4"
+            className="flex-shrink-0 w-[220px] lg:w-[340px] h-32 lg:h-48 flex items-center justify-center hover:scale-110 transition-transform duration-500 px-4"
           >
             <img
               src={logo.src}
               alt={logo.alt}
-              className="w-full h-full object-contain filter "
-              style={{ maxHeight: '100%', maxWidth: '100%' }}
+              className="w-[120%] h-[120%] object-contain filter "
+              style={{ maxHeight: '120%', maxWidth: '120%' }}
             />
           </div>
         ))}
@@ -66,10 +66,10 @@ export function ClientsSection() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="flex items-center gap-4 mb-1">
-            <div className="h-[1px] w-12 bg-[#0071C1]/20" />
-            <p className="text-[11px] uppercase tracking-[0.4em] text-[#0071C1] font-bold">Trusted Network</p>
-            <div className="h-[1px] w-12 bg-[#0071C1]/20" />
+          <div className="flex items-center mb-8">
+            <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center">
+              <span className="text-[14px] font-medium text-[#1A1A1A]">Partnership</span>
+            </div>
           </div>
           
           <h2 className="text-[#1A1A1A] font-bold" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', letterSpacing: '-0.02em', lineHeight: 1.1 }}>

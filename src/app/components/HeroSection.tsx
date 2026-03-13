@@ -12,7 +12,7 @@ export function HeroSection() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
-    <section id="home" className="bg-[#FFFFFF] overflow-hidden relative pt-32 lg:pt-44" ref={containerRef}>
+    <section id="home" className="bg-[#FFFFFF] overflow-hidden relative pt-20 lg:pt-28" ref={containerRef}>
       
       {/* Top Text Content Area */}
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-20 mb-12 lg:mb-20">
@@ -26,7 +26,7 @@ export function HeroSection() {
             >
               <div className="flex items-center gap-3">
                 <div className="h-[2px] w-8 bg-[#0071C1]" />
-                <span className="text-[12px] uppercase tracking-[0.4em] text-[#0071C1] font-bold">Premium Meats Since 2008</span>
+                <span className="text-[12px] uppercase tracking-[0.4em] text-[#0071C1] font-medium">Premium Meats Since 2008</span>
               </div>
             </motion.div>
           </div>
@@ -44,7 +44,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.1 }}
           >
             Elite Meat Purveyor <br className="hidden md:block"/>
-            <span className="font-extrabold text-[#0071C1]">for Fine Dining</span>
+            <span className="font-medium text-[#0071C1]">for Fine Dining</span>
           </motion.h1>
 
           <motion.p
@@ -62,12 +62,12 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <button className="group bg-[#1A1A1A] text-white px-10 py-4 rounded-full font-bold text-[14px] uppercase tracking-widest hover:bg-[#0071C1] transition-all duration-500 shadow-2xl shadow-gray-200 flex items-center gap-3">
-              Explore Catalog
-              <div className="w-2 h-2 rounded-full bg-white group-hover:scale-150 transition-transform" />
+            <button onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })} className="group bg-[#1A1A1A] text-white px-8 py-3.5 lg:px-10 lg:py-4 rounded-full font-medium text-[13px] uppercase tracking-widest hover:bg-[#0071C1] transition-all duration-500 shadow-lg flex items-center justify-center gap-3">
+              EXPLORE CATALOG
+              <div className="w-1.5 h-1.5 rounded-full bg-white group-hover:scale-150 transition-transform" />
             </button>
-            <button className="bg-transparent text-[#1A1A1A] border border-[#EEEEEE] px-10 py-4 rounded-full font-bold text-[14px] uppercase tracking-widest hover:border-[#1A1A1A] transition-all duration-500">
-              Corporate Inquiry
+            <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="bg-transparent text-[#1A1A1A] border border-[#E5E5E5] px-8 py-3.5 lg:px-10 lg:py-4 rounded-full font-medium text-[13px] uppercase tracking-widest hover:border-[#1A1A1A] transition-all duration-500 text-center">
+              CORPORATE INQUIRY
             </button>
           </motion.div>
 
@@ -85,10 +85,10 @@ export function HeroSection() {
                  animate={{ opacity: 1, y: 0 }}
                  transition={{ duration: 0.8, delay: stat.d }}
                >
-                 <div className="text-[40px] lg:text-[52px] font-bold text-[#1A1A1A] leading-none" style={{ letterSpacing: '-0.04em' }}>
+                 <div className="text-[40px] lg:text-[52px] font-medium text-[#1A1A1A] leading-none" style={{ letterSpacing: '-0.04em' }}>
                    {stat.val}
                  </div>
-                 <div className="text-[11px] text-[#0071C1] font-bold uppercase tracking-[0.2em]">{stat.label}</div>
+                 <div className="text-[11px] text-[#0071C1] font-medium uppercase tracking-[0.2em]">{stat.label}</div>
                </motion.div>
              ))}
           </div>
@@ -98,17 +98,22 @@ export function HeroSection() {
 
       {/* VERIFIED RAW MEAT IMAGE - ELIMINATED ALL WHITE OVERLAYS */}
       <motion.div
-        className="w-full mt-16 lg:mt-28 relative z-10"
+        className="w-full mt-10 lg:mt-16 relative z-10"
         style={{ y }}
       >
         <div className="w-full h-[500px] lg:h-[850px] relative overflow-hidden bg-gray-100">
           <img 
-            src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&q=80&w=2000"
-            alt="Premium Raw Beef Purveyor"
+            src="/hero.png"
+            alt="Premium Raw Beef Purveyor Cipta Bersama Jakarta"
             className="w-full h-full object-cover"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
           />
+          {/* Subtle Red Overlay */}
+          <div className="absolute inset-0 bg-red-800/20 mix-blend-overlay" />
           {/* Subtle Dark Vignette at bottom only */}
-          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/20 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/40 to-transparent" />
         </div>
       </motion.div>
 

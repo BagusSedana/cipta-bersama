@@ -43,17 +43,8 @@ export function Navigation() {
       >
         <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
           <div className="flex items-center justify-between h-16 lg:h-18">
-            <button onClick={() => scrollToSection('home')} className="flex items-center gap-5">
-              <svg width="42" height="32" viewBox="0 0 60 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="shrink-0">
-                <path d="M 28 8 A 12 12 0 1 0 28 32" stroke="#0071C1" strokeWidth="7" strokeLinecap="square" />
-                <path d="M 18 6 H 38 A 9 9 0 0 1 38 20 H 22" stroke="#8DC63F" strokeWidth="6" strokeLinecap="square" strokeLinejoin="miter" />
-                <path d="M 18 34 H 40 A 9 9 0 0 0 40 20 H 22" stroke="#8DC63F" strokeWidth="6" strokeLinecap="square" strokeLinejoin="miter" />
-                <path d="M 18 6 V 34" stroke="#8DC63F" strokeWidth="6" strokeLinecap="square" />
-              </svg>
-              <div className="flex flex-col justify-center leading-[1.05] text-left">
-                <span className="text-[17px] font-semibold text-[#1A1A1A] tracking-[0.05em]" style={{ fontFamily: 'DM Sans, sans-serif' }}>Cipta</span>
-                <span className="text-[17px] font-semibold text-[#1A1A1A] tracking-[0.05em]" style={{ fontFamily: 'DM Sans, sans-serif' }}>Bersama</span>
-              </div>
+            <button onClick={() => scrollToSection('home')} className="flex items-center gap-3">
+              <img src="/cb.png" alt="Cipta Bersama Logo" className="h-20 w-auto object-contain" />
             </button>
 
             {/* Desktop Navigation */}
@@ -70,12 +61,12 @@ export function Navigation() {
               ))}
               <motion.button
                 onClick={() => scrollToSection('contact')}
-                className="bg-[#0071C1] text-white px-5 py-2 text-[13px] rounded-full hover:bg-[#005a9c] transition-all duration-200"
-                style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 500 }}
+                className="bg-[#1A1A1A] text-white px-6 py-2.5 text-[13px] rounded-full hover:bg-[#0071C1] transition-all duration-300 shadow-lg shadow-black/10"
+                style={{ fontWeight: 500 }}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                Learn More
+                Minta Penawaran
               </motion.button>
             </div>
 
@@ -116,13 +107,13 @@ export function Navigation() {
               ))}
               <motion.button
                 onClick={() => scrollToSection('contact')}
-                className="mt-4 bg-[#1A1A1A] text-white px-8 py-3 rounded-full text-[14px]"
+                className="mt-4 bg-[#1A1A1A] text-white px-8 py-3 rounded-full text-[14px] hover:bg-[#0071C1] transition-colors shadow-lg"
                 style={{ fontFamily: 'DM Sans, sans-serif', fontWeight: 500 }}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                Learn More
+                Minta Penawaran
               </motion.button>
             </div>
           </motion.div>
