@@ -119,7 +119,7 @@ export function ProductsSection() {
 
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
           
-          <div className="order-2 lg:order-1 pt-4">
+          <div className="order-1 lg:order-1 pt-4">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeCategory}
@@ -174,7 +174,7 @@ export function ProductsSection() {
             </AnimatePresence>
           </div>
 
-          <div className="order-1 lg:order-2">
+          <div className="order-2 lg:order-2">
             {/* Hidden preload: semua gambar di-load di background agar switching instan */}
             <div aria-hidden="true" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', opacity: 0, pointerEvents: 'none' }}>
               {ALL_IMAGES.map((src) => (

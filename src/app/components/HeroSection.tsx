@@ -71,7 +71,7 @@ export function HeroSection() {
             </button>
           </motion.div>
 
-          <div className="flex flex-wrap items-start gap-16 lg:gap-28">
+          <div className="grid grid-cols-2 lg:flex lg:flex-wrap items-start gap-10 lg:gap-28">
              {[
                { val: "15+", label: "Years Impact", d: 0.4 },
                { val: "900+", label: "Elite Partners", d: 0.5 },
@@ -85,7 +85,7 @@ export function HeroSection() {
                  animate={{ opacity: 1, y: 0 }}
                  transition={{ duration: 0.8, delay: stat.d }}
                >
-                 <div className="text-[40px] lg:text-[52px] font-medium text-[#1A1A1A] leading-none" style={{ letterSpacing: '-0.04em' }}>
+                 <div className="text-[36px] lg:text-[52px] font-medium text-[#1A1A1A] leading-none" style={{ letterSpacing: '-0.04em' }}>
                    {stat.val}
                  </div>
                  <div className="text-[11px] text-[#0071C1] font-medium uppercase tracking-[0.2em]">{stat.label}</div>

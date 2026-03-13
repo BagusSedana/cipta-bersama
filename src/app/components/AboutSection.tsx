@@ -82,13 +82,13 @@ export function AboutSection() {
               </p>
               
               <div className="grid grid-cols-2 gap-6 mt-16">
-                <div className="bg-[#F6F5F2] p-8 rounded-3xl border border-[#EBEBEB] hover:-translate-y-2 hover:shadow-xl hover:shadow-black/5 transition-all duration-500 cursor-default">
-                  <h4 className="text-[44px] font-medium text-[#1A1A1A] mb-2 leading-none">15+</h4>
-                  <p className="text-[15px] font-medium text-[#555555]">Years Excellence</p>
+                <div className="bg-[#F6F5F2] p-6 lg:p-8 rounded-3xl border border-[#EBEBEB] hover:-translate-y-2 hover:shadow-xl hover:shadow-black/5 transition-all duration-500 cursor-default overflow-hidden">
+                  <h4 className="text-[32px] lg:text-[44px] font-medium text-[#1A1A1A] mb-2 leading-none">15+</h4>
+                  <p className="text-[14px] lg:text-[15px] font-medium text-[#555555]">Years Excellence</p>
                 </div>
-                <div className="bg-[#F6F5F2] p-8 rounded-3xl border border-[#EBEBEB] hover:-translate-y-2 hover:shadow-xl hover:shadow-black/5 transition-all duration-500 cursor-default">
-                  <h4 className="text-[44px] font-medium text-[#1A1A1A] mb-2 leading-none">Global</h4>
-                  <p className="text-[15px] font-medium text-[#555555]">Sourcing Network</p>
+                <div className="bg-[#F6F5F2] p-6 lg:p-8 rounded-3xl border border-[#EBEBEB] hover:-translate-y-2 hover:shadow-xl hover:shadow-black/5 transition-all duration-500 cursor-default overflow-hidden">
+                  <h4 className="text-[28px] lg:text-[44px] font-medium text-[#1A1A1A] mb-2 leading-none">Global</h4>
+                  <p className="text-[14px] lg:text-[15px] font-medium text-[#555555]">Sourcing Network</p>
                 </div>
               </div>
             </motion.div>
