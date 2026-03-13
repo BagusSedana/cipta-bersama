@@ -8,6 +8,7 @@ import { WarehouseSection } from './components/WarehouseSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { SEO } from './components/SEO';
+import { FloatingWA } from './components/ui/FloatingWA';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <ContactSection />
       </main>
       <Footer />
+      <FloatingWA />
     </div>
   );
 }
