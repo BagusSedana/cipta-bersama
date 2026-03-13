@@ -100,16 +100,8 @@ export function HeroSection() {
       <motion.div
         className="w-full mt-10 lg:mt-16 relative z-10"
         style={{ y }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
       >
-        <motion.div 
-          className="w-full h-[500px] lg:h-[850px] relative overflow-hidden bg-gray-100"
-          initial={{ scale: 1.15, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
-        >
+        <div className="w-full h-[500px] lg:h-[850px] relative overflow-hidden bg-[#1A1A1A]">
           <img 
             src="/hero.webp"
             alt="Premium Raw Beef Purveyor Cipta Bersama Jakarta"
@@ -118,13 +110,13 @@ export function HeroSection() {
             height={850}
             fetchPriority="high"
             loading="eager"
-            decoding="async"
+            decoding="sync"
           />
           {/* Subtle Red Overlay */}
           <div className="absolute inset-0 bg-red-800/20 mix-blend-overlay" />
           {/* Subtle Dark Vignette at bottom only */}
           <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/40 to-transparent" />
-        </motion.div>
+        </div>
       </motion.div>
 
     </section>
