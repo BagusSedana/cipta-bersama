@@ -20,7 +20,7 @@ export function HeroSection() {
           
           <div className="overflow-hidden mb-6">
             <motion.div
-              initial={{ y: "100%" }}
+              initial={false}
               animate={{ y: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
@@ -39,7 +39,7 @@ export function HeroSection() {
               letterSpacing: '-0.04em',
               fontWeight: 300
             }}
-            initial={{ opacity: 0, x: -30 }}
+            initial={false}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
@@ -49,7 +49,7 @@ export function HeroSection() {
 
           <motion.p
             className="text-[#555555] text-[18px] lg:text-[22px] leading-[1.6] mb-14 max-w-2xl font-light"
-            initial={{ opacity: 0, x: -30 }}
+            initial={false}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
@@ -58,7 +58,7 @@ export function HeroSection() {
 
           <motion.div 
             className="flex flex-wrap items-center gap-6 mb-24"
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
@@ -81,7 +81,7 @@ export function HeroSection() {
                <motion.div 
                  key={i}
                  className="flex flex-col gap-2"
-                 initial={{ opacity: 0, y: 20 }}
+                 initial={false}
                  animate={{ opacity: 1, y: 0 }}
                  transition={{ duration: 0.8, delay: stat.d }}
                >
@@ -110,7 +110,7 @@ export function HeroSection() {
             height={850}
             fetchPriority="high"
             loading="eager"
-            decoding="sync"
+            decoding="async"
           />
           {/* Subtle Red Overlay */}
           <div className="absolute inset-0 bg-red-800/20 mix-blend-overlay" />

@@ -37,7 +37,7 @@ export function Navigation() {
             ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-black/5'
             : 'bg-[#F4F9FF]/80 backdrop-blur-sm'
         }`}
-        initial={{ y: -80 }}
+        initial={false}
         animate={{ y: 0 }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       >
