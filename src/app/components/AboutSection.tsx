@@ -39,8 +39,8 @@ export function AboutSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}} 
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              <div className="mb-6">
-                <span className="text-[12px] font-medium tracking-widest uppercase text-[#888888] border-b border-[#E5E5E5] pb-2">Welcome</span>
+              <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center mb-8">
+                <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Welcome</span>
               </div>
               <p className="text-[24px] lg:text-[28px] leading-[1.6] text-[#1A1A1A] font-light italic" style={{ letterSpacing: '-0.01em' }}>
                 "At Cipta Bersama Company, we are committed to delivering the highest-quality frozen meat products with freshness you can trust. With a focus on sustainable sourcing, modern processing methods, and strict quality control, we strive to provide products that not only satisfy the palate but also ensure safety and reliability."
@@ -52,8 +52,8 @@ export function AboutSection() {
               animate={isInView ? { opacity: 1, y: 0 } : {}} 
               transition={{ duration: 0.8, delay: 0.65 }}
             >
-              <div className="mb-6">
-                <span className="text-[12px] font-medium tracking-widest uppercase text-[#888888] border-b border-[#E5E5E5] pb-2">About Us</span>
+              <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center mb-8">
+                <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">About Us</span>
               </div>
               <p className="text-[16px] xl:text-[18px] leading-[1.8] text-[#666666] font-light">
                 Our company was established in 2008 and offers a wide range of high-quality imported beef and lamb products sourced from the United States, New Zealand, Australia, and Brazil. We are committed to providing maximum satisfaction to our customers. In addition, we also serve the needs of restaurants, modern markets, cafes, and hotels.
@@ -73,8 +73,8 @@ export function AboutSection() {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <div>
-              <div className="mb-6">
-                  <span className="text-[12px] font-medium tracking-widest uppercase text-[#888888] border-b border-[#E5E5E5] pb-2">Vision & Mission</span>
+              <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center mb-8">
+                  <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Vision & Mission</span>
               </div>
               <h5 className="font-medium text-[#1A1A1A] mb-3 text-[18px]">Vision</h5>
               <p className="text-[16px] xl:text-[18px] leading-[1.8] text-[#666666] font-light mb-10">
@@ -104,8 +104,8 @@ export function AboutSection() {
               />
             </div>
 
-            <div className="mb-8">
-              <span className="text-[12px] font-medium tracking-widest uppercase text-[#888888] border-b border-[#E5E5E5] pb-2">Our Value</span>
+            <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center mb-10">
+              <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Our Value</span>
             </div>
             <div className="grid grid-cols-2 gap-4 lg:gap-5">
               {['Professionalism', 'Innovation', 'Quality', 'Customer Satisfaction'].map((val, idx) => (

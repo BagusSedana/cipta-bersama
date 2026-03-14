@@ -30,11 +30,10 @@ export function ContactSection() {
           
           <div className="lg:col-span-5 flex flex-col justify-between h-full pt-4">
             <div>
-              <motion.div className="flex items-center gap-3 mb-8" initial={{ opacity: 0, x: -20 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.5 }}>
-                <div className="w-12 h-[1px] bg-[#0071C1] opacity-50" />
-                <p className="text-[12px] uppercase tracking-[0.4em] text-[#0071C1] font-sans font-bold">
-                   Partnership
-                </p>
+              <motion.div className="flex items-center mb-8" initial={{ opacity: 0, x: -20 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.5 }}>
+                <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center">
+                  <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Partnership</span>
+                </div>
               </motion.div>
               
               <motion.h2 
