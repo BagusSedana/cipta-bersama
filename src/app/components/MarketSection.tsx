@@ -45,7 +45,7 @@ export function MarketSection() {
           >
             {/* VERIFIED CULINARY IMAGE */}
             <img 
-              src="/allMenu.png" 
+              src="/allMenu.webp" 
               alt="Culinary Market Reach" 
               className="w-full h-full object-cover"
             />
