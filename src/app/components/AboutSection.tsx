@@ -16,15 +16,21 @@ export function AboutSection() {
           <div className="lg:col-span-5">
              {/* VERIFIED RAW MEAT IMAGE */}
              <motion.div 
-               className="relative w-full h-[400px] lg:h-[650px] overflow-hidden rounded-[32px] shadow-2xl bg-[#EBE9E1]" 
+               className="relative w-full h-[400px] lg:h-[650px] overflow-hidden rounded-[32px] shadow-2xl bg-[#EBE9E1] transition-shadow duration-500 hover:shadow-black/20" 
                initial={{ opacity: 0, scale: 0.95, y: 30 }} 
                animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}} 
-               transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+               whileHover={{ scale: 1.02 }}
+               transition={{ 
+                 duration: 1.4, 
+                 ease: [0.22, 1, 0.36, 1], 
+                 delay: 0.2,
+                 scale: { duration: 0.6, ease: "easeOut" }
+               }}
              >
                 <img 
                   src="/welcome.webp" 
                   alt="Cipta Bersama - Premium Meat Supplier Jakarta" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   width={800}
                   height={600}
                   loading="lazy"
@@ -97,15 +103,21 @@ export function AboutSection() {
           >
             {/* Added Image for Visual Balance */}
             <motion.div 
-              className="relative w-full h-[250px] lg:h-[320px] rounded-[24px] overflow-hidden mb-10 shadow-lg bg-[#EBE9E1]"
+              className="relative w-full h-[250px] lg:h-[320px] rounded-[24px] overflow-hidden mb-10 shadow-lg bg-[#EBE9E1] transition-shadow duration-500 hover:shadow-black/20"
               initial={{ opacity: 0, scale: 0.95, y: 30 }} 
               animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}} 
-              transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ 
+                duration: 1.4, 
+                ease: [0.22, 1, 0.36, 1], 
+                delay: 0.4,
+                scale: { duration: 0.6, ease: "easeOut" }
+              }}
             >
               <img 
                 src="/visi.webp" 
                 alt="Premium Quality Meat Preparation" 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
             </motion.div>
 
