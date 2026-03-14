@@ -33,33 +33,29 @@ export function AboutSection() {
           </div>
 
           <div className="lg:col-span-8 mt-10 lg:mt-0">
-            <div className="grid md:grid-cols-2 gap-12 lg:gap-16">
+            <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
               
               {/* Left Column: Intro & About */}
               <motion.div 
                 initial={{ opacity: 0, y: 40 }} 
                 animate={isInView ? { opacity: 1, y: 0 } : {}} 
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="flex flex-col gap-16"
+                className="flex flex-col gap-20"
               >
                 <div>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="flex items-center gap-3 border border-[#E5E5E5] rounded-full px-5 py-2">
-                      <span className="text-[14px] font-medium text-[#1A1A1A]">Welcome Message</span>
-                    </div>
+                  <div className="mb-6">
+                    <span className="text-[12px] font-medium tracking-widest uppercase text-[#888888] border-b border-[#E5E5E5] pb-2">Welcome</span>
                   </div>
-                  <p className="text-[20px] lg:text-[22px] leading-[1.6] text-[#1A1A1A] font-light italic" style={{ letterSpacing: '-0.01em' }}>
+                  <p className="text-[22px] lg:text-[26px] leading-[1.6] text-[#1A1A1A] font-light italic" style={{ letterSpacing: '-0.01em' }}>
                     "At Cipta Bersama Company, we are committed to delivering the highest-quality frozen meat products with freshness you can trust. With a focus on sustainable sourcing, modern processing methods, and strict quality control, we strive to provide products that not only satisfy the palate but also ensure safety and reliability."
                   </p>
                 </div>
 
                 <div>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="flex items-center gap-3 border border-[#E5E5E5] rounded-full px-5 py-2">
-                      <span className="text-[14px] font-medium text-[#1A1A1A]">About Us</span>
-                    </div>
+                  <div className="mb-6">
+                    <span className="text-[12px] font-medium tracking-widest uppercase text-[#888888] border-b border-[#E5E5E5] pb-2">About Us</span>
                   </div>
-                  <p className="text-[16px] lg:text-[18px] leading-[1.8] text-[#555555] font-light">
+                  <p className="text-[16px] xl:text-[17px] leading-[1.8] text-[#666666] font-light">
                     Our company was established in 2008 and offers a wide range of high-quality imported beef and lamb products sourced from the United States, New Zealand, Australia, and Brazil. We are committed to providing maximum satisfaction to our customers. In addition, we also serve the needs of restaurants, modern markets, cafes, and hotels.
                   </p>
                 </div>
@@ -70,35 +66,31 @@ export function AboutSection() {
                 initial={{ opacity: 0, y: 40 }} 
                 animate={isInView ? { opacity: 1, y: 0 } : {}} 
                 transition={{ duration: 0.8, delay: 0.65 }}
-                className="flex flex-col gap-10"
+                className="flex flex-col gap-14"
               >
                 <div>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="flex items-center gap-3 border border-[#E5E5E5] rounded-full px-5 py-2">
-                      <span className="text-[14px] font-medium text-[#1A1A1A]">Vision & Mission</span>
-                    </div>
+                  <div className="mb-6">
+                     <span className="text-[12px] font-medium tracking-widest uppercase text-[#888888] border-b border-[#E5E5E5] pb-2">Vision & Mission</span>
                   </div>
-                  <h5 className="font-medium text-[#1A1A1A] mb-2 text-[18px]">Vision Company</h5>
-                  <p className="text-[16px] leading-[1.8] text-[#555555] font-light mb-8">
+                  <h5 className="font-medium text-[#1A1A1A] mb-3 text-[18px]">Vision</h5>
+                  <p className="text-[16px] xl:text-[17px] leading-[1.8] text-[#666666] font-light mb-10">
                     To become a leading meat supplier company, widely recognized for the consistent quality of its products, well-prepared freshness, and customer trust. We are committed to providing meat that meets premium standards.
                   </p>
                   
-                  <h5 className="font-medium text-[#1A1A1A] mb-2 text-[18px]">Mission Company</h5>
-                  <p className="text-[16px] leading-[1.8] text-[#555555] font-light">
+                  <h5 className="font-medium text-[#1A1A1A] mb-3 text-[18px]">Mission</h5>
+                  <p className="text-[16px] xl:text-[17px] leading-[1.8] text-[#666666] font-light">
                     We strive to provide high-quality meat to all customers, ranging from households and restaurants to the culinary industry, by ensuring that every product goes through a strict selection, sorting, and distribution process in accordance with food safety standards. The company focuses on maintaining the freshness and quality of its meat through modern storage technology and an efficient logistic system.
                   </p>
                 </div>
                 
                 <div className="mt-4">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="flex items-center gap-3 border border-[#E5E5E5] rounded-full px-5 py-2">
-                      <span className="text-[14px] font-medium text-[#1A1A1A]">Our Value</span>
-                    </div>
+                  <div className="mb-8">
+                    <span className="text-[12px] font-medium tracking-widest uppercase text-[#888888] border-b border-[#E5E5E5] pb-2">Our Value</span>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4 lg:gap-5">
                     {['Professionalism', 'Innovation', 'Quality', 'Customer Satisfaction'].map((val, idx) => (
-                      <div key={idx} className="bg-[#F6F5F2] p-4 lg:p-5 rounded-3xl border border-[#EBEBEB] hover:-translate-y-1 hover:shadow-xl hover:shadow-black/5 transition-all duration-500 cursor-default flex items-center justify-center text-center">
-                        <p className="text-[14px] lg:text-[15px] font-medium text-[#1A1A1A]">{val}</p>
+                      <div key={idx} className="bg-transparent py-4 text-center border-t border-b border-[#EBEBEB]">
+                        <p className="text-[14px] lg:text-[15px] text-[#1A1A1A] tracking-wider uppercase font-medium text-xs">{val}</p>
                       </div>
                     ))}
                   </div>
