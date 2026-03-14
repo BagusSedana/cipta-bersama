@@ -22,7 +22,7 @@ export function AboutSection() {
                transition={{ duration: 1.2, delay: 0.4 }}
              >
                 <img 
-                  src="/introduction.webp" 
+                  src="/welcome.png" 
                   alt="Cipta Bersama - Premium Meat Supplier Jakarta" 
                   className="w-full h-full object-cover"
                   width={800}
@@ -98,7 +98,7 @@ export function AboutSection() {
             {/* Added Image for Visual Balance */}
             <div className="relative w-full h-[250px] lg:h-[320px] rounded-[24px] overflow-hidden mb-10 shadow-lg bg-[#EBE9E1]">
               <img 
-                src="/hero.webp" 
+                src="/visi.png" 
                 alt="Premium Quality Meat Preparation" 
                 className="w-full h-full object-cover"
               />
