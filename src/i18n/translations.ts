@@ -24,15 +24,21 @@ export const translations = {
       stat4: 'Certified Provenance'
     },
     about: {
-      subtitle: 'Corporate Heritage',
-      title: 'Our Genesis',
-      p1: 'Established in 2008, Cipta Bersama embarked on a visionary quest to redefine the standards of the wholesale meat industry in Indonesia. As an eminent distributor, we bridge the gap between world-class global abattoirs and the pinnacle of culinary establishments nationwide.',
-      p2: 'Our philosophy transcends mere distribution; it is an orchestration of uncompromising quality, impeccable cold-chain integrity, and bespoke solutions tailored for modern gastronomy and elite retail.',
-      features: [
-        { title: 'Regimented Quality Assurance', desc: 'Stringent protocols ensuring absolute freshness and pristine condition.' },
-        { title: 'Global Sourcing Network', desc: 'Curating only the most exceptional cuts from globally vetted origins.' },
-        { title: 'Precision Logistics', desc: 'State-of-the-art cold chain infrastructure preserving paramount quality.' }
-      ]
+      subtitle: 'Introduction',
+      title: 'About Us',
+      p1: 'At Cipta Bersama Company, we are committed to delivering the highest-quality frozen meat products with freshness you can trust. With a focus on sustainable sourcing, modern processing methods, and strict quality control, we strive to provide products that not only satisfy the palate but also ensure safety and reliability.',
+      p2: 'Our company was established in 2008 and offers a wide range of high-quality imported beef and lamb products sourced from the United States, New Zealand, Australia, and Brazil. We are committed to providing maximum satisfaction to our customers. In addition, we also serve the needs of restaurants, modern markets, cafes, and hotels.',
+      vision: {
+        title: 'Vision & Mission',
+        subtitle1: 'Vision',
+        desc1: 'To become a leading meat supplier company, widely recognized for the consistent quality of its products, well-prepared freshness, and customer trust. We are committed to providing meat that meets premium standards.',
+        subtitle2: 'Mission',
+        desc2: 'We strive to provide high-quality meat to all customers, ranging from households and restaurants to the culinary industry, by ensuring that every product goes through a strict selection, sorting, and distribution process in accordance with food safety standards. The company focuses on maintaining the freshness and quality of its meat through modern storage technology and an efficient logistic system.'
+      },
+      values: {
+        title: 'Our Value',
+        items: ['Professionalism', 'Innovation', 'Quality', 'Customer Satisfaction']
+      }
     },
     products: {
       subtitle: 'Our Curated Portfolio',
@@ -52,19 +58,26 @@ export const translations = {
       desc: 'Our relentless pursuit of perfection has cemented our position as the partner of choice for Indonesia’s most prestigious culinary and retail consortiums.'
     },
     market: {
-      subtitle: 'Strategic Deployment',
-      title: 'National Distribution Matrix',
-      desc: 'Commanding a robust distribution infrastructure that ensures our premium artifacts reach every corner of the archipelago with uncompromising integrity.',
+      subtitle: 'Market Presence',
+      title: 'Supporting the entire F&B ecosystem',
+      desc: 'We define the supply chain for Indonesia\'s culinary vanguard.',
       sectors: [
-        { title: 'Fine Dining & Hospitality', desc: 'Elevating the standards of five-star establishments and elite dining venues.' },
-        { title: 'Modern Retail Conglomerates', desc: 'Supplying premium corridors of the nation’s leading supermarkets.' },
-        { title: 'Industrial Gastronomy', desc: 'Empowering food manufacturing sectors with consistent, high-caliber raw materials.' }
+        { title: 'Restaurant', desc: 'Fine Dining & Casual Cluster' },
+        { title: 'Hotel', desc: 'International Luxury Hospitality' },
+        { title: 'Cafe', desc: 'High-Volume Specialty Bistro' },
+        { title: 'Catering', desc: 'Premium Events & MICE' }
       ]
     },
     warehouse: {
-      subtitle: 'Infrastructure & Capability',
-      title: 'State-of-the-Art Cold Repository',
-      desc: 'Our epicenter of operations features avant-garde refrigeration technologies, ensuring absolute preservation of cellular integrity and flavor fidelity.'
+      subtitle: 'Our Services',
+      title: 'Comprehensive Meat Solutions',
+      desc: 'We go beyond supplying premium meats; we partner with your business to provide tailored solutions, from custom portioning to flawless cold-chain delivery.',
+      facilities: [
+        { title: 'Premium Frozen Meat Supply', desc: 'Providing high-quality frozen meat products with freshness you can trust.' },
+        { title: 'Cold Chain Delivery', desc: 'Efficient logistic system and modern storage technology to maintain quality.' },
+        { title: 'Custom Portion & Individual Ready', desc: 'Serving the specific needs of restaurants, modern markets, cafes, and hotels.' },
+        { title: 'Quality & Safety Assurance', desc: 'Strict selection, sorting, and distribution process in accordance with food safety standards.' }
+      ]
     },
     contact: {
       subtitle: 'Initiate Dialogue',
@@ -117,15 +130,21 @@ export const translations = {
       stat4: 'Sertifikasi Keaslian'
     },
     about: {
-      subtitle: 'Warisan Korporat',
-      title: 'Genesis Kami',
-      p1: 'Didirikan pada tahun 2008, Cipta Bersama memulai sebuah misi visioner untuk mendefinisikan ulang standar industri daging grosir di Indonesia. Sebagai distributor terkemuka, kami menjembatani jarak antara rumah potong hewan global kelas dunia dan puncak dari institusi kuliner di seluruh nusantara.',
-      p2: 'Filosofi kami melampaui sekadar distribusi; ini adalah sebuah orkestrasi dari kualitas tanpa kompromi, integritas rantai dingin yang absolut, dan solusi khusus yang dirancang untuk keahlian gastronomi modern dan ritel elit.',
-      features: [
-        { title: 'Jaminan Kualitas Terukur', desc: 'Protokol ketat yang memastikan kesegaran mutlak dan kondisi yang tak bercela.' },
-        { title: 'Jaringan Pengadaan Global', desc: 'Mengkurasi secara spesifik potongan daging paling luar biasa dari asal-usul yang terverifikasi secara global.' },
-        { title: 'Logistik Presisi Tinggi', desc: 'Infrastruktur rantai dingin mutakhir yang mempertahankan kualitas premium.' }
-      ]
+      subtitle: 'Introduction',
+      title: 'About Us',
+      p1: 'Di Cipta Bersama Company, kami berpegang teguh pada komitmen absolut untuk mendistribusikan produk daging beku dengan kualitas supremasi dan kesegaran yang terjamin. Melalui fokus pada pengadaan yang berkelanjutan, metode pemrosesan termutakhir, serta kendali mutu yang ketat, kami mendedikasikan diri untuk menyediakan produk yang tidak hanya memuaskan selera, namun juga menjamin keamanan dan reliabilitas di tingkat tertinggi.',
+      p2: 'Korporasi kami didirikan pada tahun 2008, menghadirkan spektrum luas produk sapi dan domba impor berkualitas premium yang bersumber dari Amerika Serikat, Selandia Baru, Australia, dan Brasil. Kami berdedikasi penuh untuk menyajikan kepuasan maksimal bagi klien kami. Selain itu, kami secara menyeluruh melayani kebutuhan restoran, pasar modern, kafe, dan mahligai perhotelan.',
+      vision: {
+        title: 'Vision & Mission',
+        subtitle1: 'Vision',
+        desc1: 'Menjadi korporasi pemasok daging terdepan, diakui secara luas atas konsistensi kaliber produknya, kesegaran yang terjaga sempurna, dan kepercayaan absolut dari klien. Kami senantiasa berkomitmen untuk menyajikan daging yang memenuhi standar premium internasional.',
+        subtitle2: 'Mission',
+        desc2: 'Kami berupaya keras untuk menyediakan daging berkualitas tanpa kompromi kepada seluruh klien, mulai dari ranah rumah tangga dan restoran hingga industri kuliner, dengan memastikan bahwa setiap produk melewati proses seleksi, penyortiran, dan distribusi yang luar biasa ketat sesuai dengan standar keamanan pangan global. Korporasi memfokuskan diri pada penjagaan kesegaran dan mutu daging melalui teknologi penyimpanan avant-garde dan sistem logistik berefisiensi tinggi.'
+      },
+      values: {
+        title: 'Our Value',
+        items: ['Professionalism', 'Innovation', 'Quality', 'Customer Satisfaction']
+      }
     },
     products: {
       subtitle: 'Portofolio Terkurasi',
@@ -145,19 +164,26 @@ export const translations = {
       desc: 'Pengejaran kami yang tak kenal lelah akan kesempurnaan telah mengukuhkan posisi kami sebagai mitra pilihan bagi konsorsium kuliner dan ritel paling bergengsi di Indonesia.'
     },
     market: {
-      subtitle: 'Penyebaran Strategis',
-      title: 'Matriks Distribusi Nasional',
-      desc: 'Mengendalikan infrastruktur distribusi yang tangguh yang memastikan artefak premium kami menjangkau setiap sudut nusantara dengan integritas tanpa kompromi.',
+      subtitle: 'Market Presence',
+      title: 'Mendukung Seluruh Ekosistem F&B',
+      desc: 'Kami meredefinisikan rantai pasokan untuk barisan terdepan mahakarya kuliner di Indonesia.',
       sectors: [
-        { title: 'Fine Dining & Hospitalitas', desc: 'Meningkatkan standar dari institusi bintang lima dan tempat bersantap elit.' },
-        { title: 'Konglomerasi Ritel Modern', desc: 'Memasok koridor premium dari jajaran supermarket terdepan di tingkat nasional.' },
-        { title: 'Gastronomi Industrial', desc: 'Memberdayakan sektor manufaktur makanan dengan bahan baku kaliber tinggi yang konsisten.' }
+        { title: 'Restaurant', desc: 'Klaster Fine Dining & Kasual' },
+        { title: 'Hotel', desc: 'Hospitalitas Mewah Internasional' },
+        { title: 'Cafe', desc: 'Bistro Spesialti Volume Tinggi' },
+        { title: 'Catering', desc: 'Acara Premium & MICE' }
       ]
     },
     warehouse: {
-      subtitle: 'Infrastruktur & Kapabilitas',
-      title: 'Repositori Pendingin Mutakhir',
-      desc: 'Pusat operasi kami dilengkapi dengan teknologi refrigerasi avant-garde, memastikan pelestarian absolut dari integritas seluler dan profil orisinal rasa.'
+      subtitle: 'Our Services',
+      title: 'Solusi Daging Komprehensif',
+      desc: 'Kami melampaui sekadar menyuplai daging premium; kami bersinergi dengan bisnis Anda untuk merancang solusi korporat khusus, mulai dari pemotongan eksklusif hingga pengiriman rantai dingin yang tanpa cela.',
+      facilities: [
+        { title: 'Premium Frozen Meat Supply', desc: 'Menyediakan produk daging beku berkualitas premium dengan kesegaran yang terjamin keasliannya.' },
+        { title: 'Cold Chain Delivery', desc: 'Sistem logistik efisien dan teknologi penyimpanan mutakhir demi mempertahankan integritas mutu tingkat tinggi.' },
+        { title: 'Custom Portion & Individual Ready', desc: 'Merancang potongan spesifik sesuai visi restoran, pasar modern, kafe, dan hotel eksklusif.' },
+        { title: 'Quality & Safety Assurance', desc: 'Protokol seleksi, penyortiran, dan distribusi ekstrem yang sepenuhnya selaras dengan standar keamanan pangan global.' }
+      ]
     },
     contact: {
       subtitle: 'Inisiasi Dialog',

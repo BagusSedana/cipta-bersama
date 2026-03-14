@@ -82,17 +82,16 @@ export function AboutSection() {
           >
             <div>
               <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center mb-8">
-                  <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.about.features[0].title}</span>
+                  <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.about.vision.title}</span>
               </div>
+              <h5 className="font-medium text-[#1A1A1A] mb-3 text-[18px]">{t.about.vision.subtitle1}</h5>
               <p className="text-[16px] xl:text-[18px] leading-[1.8] text-[#666666] font-light mb-10">
-                {t.about.features[0].desc}
+                {t.about.vision.desc1}
               </p>
               
-              <div className="border border-[#E5E5E5] mt-6 rounded-full px-5 py-2 inline-flex items-center mb-8">
-                  <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.about.features[1].title}</span>
-              </div>
+              <h5 className="font-medium text-[#1A1A1A] mb-3 text-[18px]">{t.about.vision.subtitle2}</h5>
               <p className="text-[16px] xl:text-[18px] leading-[1.8] text-[#666666] font-light">
-                {t.about.features[1].desc}
+                {t.about.vision.desc2}
               </p>
             </div>
           </motion.div>
@@ -125,11 +124,15 @@ export function AboutSection() {
             </motion.div>
 
             <div className="border border-[#E5E5E5] mt-10 rounded-full px-5 py-2 inline-flex items-center mb-8">
-              <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.about.features[2].title}</span>
+              <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.about.values.title}</span>
             </div>
-            <p className="text-[16px] xl:text-[18px] leading-[1.8] text-[#666666] font-light">
-              {t.about.features[2].desc}
-            </p>
+            <div className="grid grid-cols-2 gap-4 lg:gap-5">
+              {t.about.values.items.map((val, idx) => (
+                <div key={idx} className="bg-[#FBFBF9] border border-[#EBEBEB] py-6 px-4 text-center rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                  <p className="text-[13px] lg:text-[14px] text-[#1A1A1A] tracking-wider uppercase font-medium">{val}</p>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
         </div>

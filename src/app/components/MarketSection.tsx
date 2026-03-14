@@ -10,7 +10,8 @@ export function MarketSection() {
   const sectors = [
     { name: t.market.sectors[0].title, percentage: 30, desc: t.market.sectors[0].desc },
     { name: t.market.sectors[1].title, percentage: 35, desc: t.market.sectors[1].desc },
-    { name: t.market.sectors[2].title, percentage: 35, desc: t.market.sectors[2].desc }
+    { name: t.market.sectors[2].title, percentage: 20, desc: t.market.sectors[2].desc },
+    { name: t.market.sectors[3].title, percentage: 15, desc: t.market.sectors[3].desc }
   ];
 
   return (
@@ -50,7 +51,7 @@ export function MarketSection() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {sectors.map((sector, idx) => (
             <motion.div 
               key={sector.name}

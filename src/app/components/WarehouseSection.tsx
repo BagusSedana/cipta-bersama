@@ -15,10 +15,10 @@ export function WarehouseSection() {
   ];
 
   const facilities = [
-    { icon: Building2, title: 'Premium Frozen Meat Supply', desc: 'Providing high-quality frozen meat products with freshness you can trust.' },
-    { icon: Truck, title: 'Cold Chain Delivery', desc: 'Efficient logistic system and modern storage technology to maintain quality.' },
-    { icon: Ruler, title: 'Custom Portion & Individual Ready', desc: 'Serving the specific needs of restaurants, modern markets, cafes, and hotels.' },
-    { icon: MapPin, title: 'Quality & Safety Assurance', desc: 'Strict selection, sorting, and distribution process in accordance with food safety standards.' },
+    { icon: Building2, title: t.warehouse.facilities[0].title, desc: t.warehouse.facilities[0].desc },
+    { icon: Truck, title: t.warehouse.facilities[1].title, desc: t.warehouse.facilities[1].desc },
+    { icon: Ruler, title: t.warehouse.facilities[2].title, desc: t.warehouse.facilities[2].desc },
+    { icon: MapPin, title: t.warehouse.facilities[3].title, desc: t.warehouse.facilities[3].desc },
   ];
 
   return (
