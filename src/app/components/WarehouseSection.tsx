@@ -70,7 +70,7 @@ export function WarehouseSection() {
           <div className="lg:col-span-5">
             <motion.div className="flex items-center mb-8" initial={{ opacity: 0, x: -30 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8 }}>
               <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center">
-                <span className="text-[14px] font-medium text-[#1A1A1A]">Our Services</span>
+                <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Our Services</span>
               </div>
             </motion.div>
             <motion.h2 className="font-light text-[#1A1A1A] mb-10" style={{ fontSize: 'clamp(3rem, 5.5vw, 5.5rem)', letterSpacing: '-0.04em', lineHeight: 1 }} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 1, delay: 0.2 }}>

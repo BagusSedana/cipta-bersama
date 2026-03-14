@@ -19,7 +19,7 @@ export function MarketSection() {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-32 items-center mb-24 lg:mb-40">
           <motion.div initial={{ opacity: 0, x: -50 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 1, ease: [0.22,1,0.36,1] }}>
               <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center mb-8">
-                <span className="text-[14px] font-medium text-[#1A1A1A]">Market Reach</span>
+                <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Market Reach</span>
               </div>
             <h2 className="font-light text-[#1A1A1A] mb-8" style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', letterSpacing: '-0.03em', lineHeight: 1.1 }}>
               Supporting the <br/><span className="font-medium text-[#0071C1]">entire F&B ecosystem</span>

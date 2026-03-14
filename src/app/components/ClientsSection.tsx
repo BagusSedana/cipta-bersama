@@ -68,7 +68,7 @@ export function ClientsSection() {
         >
           <div className="flex items-center mb-8">
             <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center">
-              <span className="text-[14px] font-medium text-[#1A1A1A]">Partnership</span>
+              <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Partnership</span>
             </div>
           </div>
           
