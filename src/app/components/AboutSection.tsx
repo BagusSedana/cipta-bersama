@@ -17,9 +17,9 @@ export function AboutSection() {
              {/* VERIFIED RAW MEAT IMAGE */}
              <motion.div 
                className="relative w-full h-[400px] lg:h-[650px] overflow-hidden rounded-[32px] shadow-2xl bg-[#EBE9E1]" 
-               initial={{ opacity: 0, scale: 0.9 }} 
-               animate={isInView ? { opacity: 1, scale: 1 } : {}} 
-               transition={{ duration: 1.2, delay: 0.4 }}
+               initial={{ opacity: 0, scale: 0.95, y: 30 }} 
+               animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}} 
+               transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
              >
                 <img 
                   src="/welcome.webp" 
@@ -96,13 +96,18 @@ export function AboutSection() {
             transition={{ duration: 0.8, delay: 0.65 }}
           >
             {/* Added Image for Visual Balance */}
-            <div className="relative w-full h-[250px] lg:h-[320px] rounded-[24px] overflow-hidden mb-10 shadow-lg bg-[#EBE9E1]">
+            <motion.div 
+              className="relative w-full h-[250px] lg:h-[320px] rounded-[24px] overflow-hidden mb-10 shadow-lg bg-[#EBE9E1]"
+              initial={{ opacity: 0, scale: 0.95, y: 30 }} 
+              animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}} 
+              transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
+            >
               <img 
                 src="/visi.webp" 
                 alt="Premium Quality Meat Preparation" 
                 className="w-full h-full object-cover"
               />
-            </div>
+            </motion.div>
 
             <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center mb-10">
               <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Our Value</span>
