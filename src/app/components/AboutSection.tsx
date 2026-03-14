@@ -96,9 +96,9 @@ export function AboutSection() {
             transition={{ duration: 0.8, delay: 0.65 }}
           >
             {/* Added Image for Visual Balance */}
-            <div className="relative w-full h-[250px] lg:h-[320px] rounded-[24px] overflow-hidden mb-10 shadow-lg">
+            <div className="relative w-full h-[250px] lg:h-[320px] rounded-[24px] overflow-hidden mb-10 shadow-lg bg-[#EBE9E1]">
               <img 
-                src="https://images.unsplash.com/photo-1603360946369-pt9ra22pvc4?auto=format&fit=crop&q=80&w=1000" 
+                src="/hero.webp" 
                 alt="Premium Quality Meat Preparation" 
                 className="w-full h-full object-cover"
               />
