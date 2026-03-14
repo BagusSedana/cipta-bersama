@@ -1,7 +1,9 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export function AboutSection() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
@@ -46,10 +48,10 @@ export function AboutSection() {
               transition={{ duration: 0.8, delay: 0.5 }}
             >
               <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center mb-8">
-                <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Welcome</span>
+                <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.about.subtitle}</span>
               </div>
               <p className="text-[24px] lg:text-[28px] leading-[1.6] text-[#1A1A1A] font-light italic" style={{ letterSpacing: '-0.01em' }}>
-                "At Cipta Bersama Company, we are committed to delivering the highest-quality frozen meat products with freshness you can trust. With a focus on sustainable sourcing, modern processing methods, and strict quality control, we strive to provide products that not only satisfy the palate but also ensure safety and reliability."
+                "{t.about.p1}"
               </p>
             </motion.div>
 
@@ -59,10 +61,10 @@ export function AboutSection() {
               transition={{ duration: 0.8, delay: 0.65 }}
             >
               <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center mb-8">
-                <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">About Us</span>
+                <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.about.title}</span>
               </div>
               <p className="text-[16px] xl:text-[18px] leading-[1.8] text-[#666666] font-light">
-                Our company was established in 2008 and offers a wide range of high-quality imported beef and lamb products sourced from the United States, New Zealand, Australia, and Brazil. We are committed to providing maximum satisfaction to our customers. In addition, we also serve the needs of restaurants, modern markets, cafes, and hotels.
+                {t.about.p2}
               </p>
             </motion.div>
           </div>
@@ -80,16 +82,17 @@ export function AboutSection() {
           >
             <div>
               <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center mb-8">
-                  <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Vision & Mission</span>
+                  <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.about.features[0].title}</span>
               </div>
-              <h5 className="font-medium text-[#1A1A1A] mb-3 text-[18px]">Vision</h5>
               <p className="text-[16px] xl:text-[18px] leading-[1.8] text-[#666666] font-light mb-10">
-                To become a leading meat supplier company, widely recognized for the consistent quality of its products, well-prepared freshness, and customer trust. We are committed to providing meat that meets premium standards.
+                {t.about.features[0].desc}
               </p>
               
-              <h5 className="font-medium text-[#1A1A1A] mb-3 text-[18px]">Mission</h5>
+              <div className="border border-[#E5E5E5] mt-6 rounded-full px-5 py-2 inline-flex items-center mb-8">
+                  <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.about.features[1].title}</span>
+              </div>
               <p className="text-[16px] xl:text-[18px] leading-[1.8] text-[#666666] font-light">
-                We strive to provide high-quality meat to all customers, ranging from households and restaurants to the culinary industry, by ensuring that every product goes through a strict selection, sorting, and distribution process in accordance with food safety standards. The company focuses on maintaining the freshness and quality of its meat through modern storage technology and an efficient logistic system.
+                {t.about.features[1].desc}
               </p>
             </div>
           </motion.div>
@@ -121,16 +124,12 @@ export function AboutSection() {
               />
             </motion.div>
 
-            <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center mb-10">
-              <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Our Value</span>
+            <div className="border border-[#E5E5E5] mt-10 rounded-full px-5 py-2 inline-flex items-center mb-8">
+              <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.about.features[2].title}</span>
             </div>
-            <div className="grid grid-cols-2 gap-4 lg:gap-5">
-              {['Professionalism', 'Innovation', 'Quality', 'Customer Satisfaction'].map((val, idx) => (
-                <div key={idx} className="bg-[#FBFBF9] border border-[#EBEBEB] py-6 px-4 text-center rounded-2xl hover:-translate-y-1 transition-transform duration-300">
-                  <p className="text-[13px] lg:text-[14px] text-[#1A1A1A] tracking-wider uppercase font-medium">{val}</p>
-                </div>
-              ))}
-            </div>
+            <p className="text-[16px] xl:text-[18px] leading-[1.8] text-[#666666] font-light">
+              {t.about.features[2].desc}
+            </p>
           </motion.div>
 
         </div>

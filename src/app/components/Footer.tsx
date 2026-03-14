@@ -1,30 +1,32 @@
 import { useState } from 'react';
 import { ArrowRight, Twitter, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export function Footer() {
+  const { t } = useLanguage();
   const [email, setEmail] = useState('');
 
   const footerLinks = [
     {
-      title: 'Products',
+      title: t.footer.nav.products,
       links: [
-        { name: 'Prime Cuts', href: '#products' },
-        { name: 'Lamb Selection', href: '#products' },
-        { name: 'Secondary Cuts', href: '#products' },
-        { name: 'Custom Orders', href: '#products' }
+        { name: t.products.cuts.prime.title, href: '#products' },
+        { name: t.products.cuts.lamb.title, href: '#products' },
+        { name: t.products.cuts.secondary.title, href: '#products' },
+        { name: t.products.cuts.custom.title, href: '#products' }
       ]
     },
     {
-      title: 'Company',
+      title: t.footer.nav.company,
       links: [
-        { name: 'About Us', href: '#about' },
-        { name: 'Our Facility', href: '#warehouse' },
-        { name: 'Partners', href: '#clients' },
-        { name: 'Contact', href: '#contact' }
+        { name: t.nav.about, href: '#about' },
+        { name: t.nav.facility, href: '#warehouse' },
+        { name: t.nav.clients, href: '#clients' },
+        { name: t.nav.contact, href: '#contact' }
       ]
     },
     {
-      title: 'Legal',
+      title: t.footer.nav.legal,
       links: [
         { name: 'Privacy Policy', href: '#' },
         { name: 'Terms of Service', href: '#' },
@@ -45,22 +47,33 @@ export function Footer() {
           <div className="lg:col-span-4 pr-0 lg:pr-8 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-5 mb-10">
-                <img src="/cb.webp" alt="Cipta Bersama - Premium Meat Supplier Logo" className="h-20 w-auto object-contain brightness-0 invert" width={140} height={140} />
+                <div 
+                  className="h-20 w-36 bg-[#0071C1]" 
+                  style={{ 
+                    WebkitMaskImage: 'url(/cb.webp)', 
+                    WebkitMaskSize: 'contain', 
+                    WebkitMaskRepeat: 'no-repeat', 
+                    maskImage: 'url(/cb.webp)', 
+                    maskSize: 'contain', 
+                    maskRepeat: 'no-repeat' 
+                  }} 
+                  aria-label="Cipta Bersama - Premium Meat Supplier Logo" 
+                />
               </div>
               
               <p className="text-[16px] leading-[1.8] mb-12 max-w-sm text-gray-400 font-light">
-                Partner with us to achieve sustainable growth and success. Delivering world-class wholesale premium meat distribution across Indonesia.
+                {t.footer.desc}
               </p>
             </div>
 
             <div className="w-full">
-              <p className="text-[11px] uppercase tracking-widest mb-4 font-bold text-gray-400">Subscribe to Newsletter</p>
+              <p className="text-[11px] uppercase tracking-widest mb-4 font-bold text-gray-400">{t.footer.newsletter.title}</p>
               <form onSubmit={(e) => e.preventDefault()} className="relative w-full max-w-sm group">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email address"
+                  placeholder={t.footer.newsletter.placeholder}
                   className="w-full bg-[#0a0a0a] border border-[#333333] rounded-full py-4 pl-6 pr-14 outline-none text-[14px] text-white transition-all focus:border-white placeholder:text-gray-600 font-light"
                  
                   required
@@ -128,17 +141,17 @@ export function Footer() {
         {/* Bottom Section: Copyright & Social */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-6 pt-10">
           <p className="text-[14px] text-gray-500 font-light">
-            © {new Date().getFullYear()} Cipta Bersama. All rights reserved.
+            {t.footer.rights.replace('{year}', new Date().getFullYear().toString())}
           </p>
           
           <div className="flex items-center gap-4">
-              <a href="https://wa.me/6281294948588" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-[#25D366] hover:border-[#25D366] hover:text-white transition-all" aria-label="Contact us on WhatsApp">
+              <a href="https://wa.me/6281294948588" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#0071C1] text-white flex items-center justify-center hover:bg-[#25D366] transition-all" aria-label="Contact us on WhatsApp">
                 <Facebook className="w-[18px] h-[18px]" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-[#E1306C] hover:border-[#E1306C] hover:text-white transition-all" aria-label="Follow us on Instagram">
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#0071C1] text-white flex items-center justify-center hover:bg-[#25D366] transition-all" aria-label="Follow us on Instagram">
                 <Instagram className="w-[18px] h-[18px]" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#111111] border border-[#222222] flex items-center justify-center text-gray-400 hover:bg-[#0077b5] hover:border-[#0077b5] hover:text-white transition-all" aria-label="Connect with us on LinkedIn">
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="w-11 h-11 rounded-full bg-[#0071C1] text-white flex items-center justify-center hover:bg-[#25D366] transition-all" aria-label="Connect with us on LinkedIn">
                 <Linkedin className="w-[18px] h-[18px]" />
               </a>
           </div>

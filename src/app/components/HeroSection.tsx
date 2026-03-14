@@ -1,7 +1,9 @@
 import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export function HeroSection() {
+  const { t } = useLanguage();
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -26,7 +28,7 @@ export function HeroSection() {
             >
               <div className="flex items-center gap-3">
                 <div className="h-[2px] w-8 bg-[#0071C1]" />
-                <span className="text-[12px] uppercase tracking-[0.4em] text-[#0071C1] font-medium">Premium Meats Since 2008</span>
+                <span className="text-[12px] uppercase tracking-[0.4em] text-[#0071C1] font-medium">{t.hero.subtitle}</span>
               </div>
             </motion.div>
           </div>
@@ -43,8 +45,8 @@ export function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            Elite Meat Purveyor <br className="hidden md:block"/>
-            <span className="font-medium text-[#0071C1]">for Fine Dining</span>
+            {t.hero.title1} <br className="hidden md:block"/>
+            <span className="font-medium text-[#0071C1]">{t.hero.title2}</span>
           </motion.h1>
 
           <motion.p
@@ -53,7 +55,7 @@ export function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            "Cipta Bersama - Committed to Bringing You Frozen Meats of Exceptional Quality and Taste."
+            {t.hero.quote}
           </motion.p>
 
           <motion.div 
@@ -63,20 +65,20 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <button onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })} className="group bg-[#1A1A1A] text-white px-8 py-3.5 lg:px-10 lg:py-4 rounded-full font-medium text-[13px] uppercase tracking-widest hover:bg-[#0071C1] transition-all duration-500 shadow-lg flex items-center justify-center gap-3">
-              EXPLORE CATALOG
+              {t.hero.btnExplore}
               <div className="w-1.5 h-1.5 rounded-full bg-white group-hover:scale-150 transition-transform" />
             </button>
             <button onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })} className="bg-transparent text-[#1A1A1A] border border-[#E5E5E5] px-8 py-3.5 lg:px-10 lg:py-4 rounded-full font-medium text-[13px] uppercase tracking-widest hover:border-[#1A1A1A] transition-all duration-500 text-center">
-              CORPORATE INQUIRY
+              {t.hero.btnCorporate}
             </button>
           </motion.div>
 
           <div className="grid grid-cols-2 lg:flex lg:flex-wrap items-start gap-10 lg:gap-28">
              {[
-               { val: "15+", label: "Years Impact", d: 0.4 },
-               { val: "900+", label: "Elite Partners", d: 0.5 },
-               { val: "50+", label: "Specialty Cuts", d: 0.6 },
-               { val: "Halal", label: "Certified Source", d: 0.7 }
+               { val: "15+", label: t.hero.stat1, d: 0.4 },
+               { val: "900+", label: t.hero.stat2, d: 0.5 },
+               { val: "50+", label: t.hero.stat3, d: 0.6 },
+               { val: "Halal", label: t.hero.stat4, d: 0.7 }
              ].map((stat, i) => (
                <motion.div 
                  key={i}

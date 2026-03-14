@@ -1,8 +1,10 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { MapPin, Building2, Truck, Ruler } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export function WarehouseSection() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
@@ -70,16 +72,15 @@ export function WarehouseSection() {
           <div className="lg:col-span-5">
             <motion.div className="flex items-center mb-8" initial={{ opacity: 0, x: -30 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8 }}>
               <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center">
-                <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Our Services</span>
+                <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.warehouse.subtitle}</span>
               </div>
             </motion.div>
             <motion.h2 className="font-light text-[#1A1A1A] mb-10" style={{ fontSize: 'clamp(3rem, 5.5vw, 5.5rem)', letterSpacing: '-0.04em', lineHeight: 1 }} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 1, delay: 0.2 }}>
-              Comprehensive <br />
-              <span className="font-medium text-[#0071C1]">Meat Solutions</span>
+              <span className="font-medium text-[#0071C1]">{t.warehouse.title}</span>
             </motion.h2>
             <div className="mt-16 pt-16 border-t border-gray-100">
               <p className="text-[18px] lg:text-[20px] leading-[1.8] text-[#555555] font-light">
-                We go beyond supplying premium meats; we partner with your business to provide tailored solutions, from custom portioning to flawless cold-chain delivery.
+                {t.warehouse.desc}
               </p>
             </div>
           </div>

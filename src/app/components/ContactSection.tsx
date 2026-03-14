@@ -1,8 +1,10 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export function ContactSection() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
@@ -32,7 +34,7 @@ export function ContactSection() {
             <div>
               <motion.div className="flex items-center mb-8" initial={{ opacity: 0, x: -20 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.5 }}>
                 <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center">
-                  <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Partnership</span>
+                  <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.contact.subtitle}</span>
                 </div>
               </motion.div>
               
@@ -41,7 +43,7 @@ export function ContactSection() {
                 style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', letterSpacing: '-0.02em', lineHeight: 1.1 }}
                 initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.1 }}
               >
-                Corporate <br/><span className="font-bold text-[#0071C1]">Inquiry</span>
+                <span className="font-bold text-[#0071C1]">{t.contact.title}</span>
               </motion.h2>
 
               <motion.p
@@ -49,7 +51,7 @@ export function ContactSection() {
                 style={{ fontWeight: 300 }}
                 initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Ready to elevate your culinary offerings? Provide us with your details and our team will get in touch to discuss wholesale opportunities.
+                {t.contact.desc}
               </motion.p>
             </div>
             
@@ -82,29 +84,29 @@ export function ContactSection() {
                 </div>
                 <div className="relative group">
                   <input type="text" id="company" name="company" required className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent font-light" placeholder="Company Name" />
-                  <label htmlFor="company" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">Company Name</label>
+                  <label htmlFor="company" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">{t.contact.form.name}</label>
                 </div>
               </div>
 
               <div className="grid xl:grid-cols-2 gap-16 xl:gap-12">
                 <div className="relative group">
                   <input type="email" id="email" name="email" required className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent font-light" placeholder="Email Address" />
-                  <label htmlFor="email" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">Email Address</label>
+                  <label htmlFor="email" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">{t.contact.form.email}</label>
                 </div>
                 <div className="relative group">
                   <input type="tel" id="phone" name="phone" required className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent font-light" placeholder="Phone Number" />
-                  <label htmlFor="phone" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">Phone / WhatsApp</label>
+                  <label htmlFor="phone" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">{t.contact.form.phone}</label>
                 </div>
               </div>
 
               <div className="relative group pt-4">
                 <textarea id="message" name="message" required rows={1} className="peer w-full bg-transparent border-b border-gray-200 py-2 text-[18px] text-[#1A1A1A] outline-none transition-colors focus:border-[#0071C1] placeholder-transparent resize-none font-light min-h-[40px]" placeholder="Message"></textarea>
-                <label htmlFor="message" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">How can we help you?</label>
+                <label htmlFor="message" className="absolute left-0 top-2 text-[14px] text-gray-400 cursor-text transition-all peer-focus:-top-6 peer-focus:text-[11px] peer-focus:text-[#0071C1] peer-focus:uppercase peer-focus:tracking-widest peer-valid:-top-6 peer-valid:text-[11px] peer-valid:uppercase peer-valid:tracking-widest peer-valid:text-[#0071C1]">{t.contact.form.message}</label>
               </div>
 
               <div className="pt-4 flex justify-end">
                 <button className="group relative overflow-hidden bg-[#1A1A1A] text-white rounded-full px-12 py-4 text-[13px] uppercase tracking-widest font-bold w-full sm:w-auto mt-6 flex items-center justify-center gap-4 hover:bg-[#0071C1] transition-all duration-300 shadow-xl shadow-gray-200">
-                  <span className="relative z-10">Submit Inquiry</span> 
+                  <span className="relative z-10">{t.contact.form.submit}</span> 
                   <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1.5 transition-transform" />
                 </button>
               </div>

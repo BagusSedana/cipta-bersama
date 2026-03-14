@@ -1,6 +1,7 @@
 import { motion, useInView, AnimatePresence } from 'motion/react';
 import { useRef, useState, useCallback } from 'react';
 import { ChevronRight } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 // Preload images for a category on hover — only fetches when user shows intent
 const preloadedCategories = new Set<string>();
@@ -21,6 +22,7 @@ function preloadCategoryImages(items: string[], defaultImage: string) {
 }
 
 export function ProductsSection() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
   const [activeCategory, setActiveCategory] = useState<'prime' | 'lamb' | 'secondary'>('prime');
@@ -34,23 +36,23 @@ export function ProductsSection() {
 
   const productData = {
     prime: {
-      title: 'Our Product',
-      subtitle: 'Prime Cut Selection',
-      desc: 'Our flagship premium cuts meticulously selected for superior marbling, age, and tenderness. The definitive choice for steakhouse excellence.',
+      title: t.products.title,
+      subtitle: t.products.cuts.prime.title,
+      desc: t.products.cuts.prime.desc,
       image: '/daging/Tenderloin.webp',
       items: ['Tenderloin', 'Striploin', 'T-Bone', 'Chuck Eye Roll', 'Short Rib', 'Sirloin', 'Ribeye', 'Top Sirloin', 'Flat Iron']
     },
     lamb: {
-      title: 'Our Product',
-      subtitle: 'Premium Lamb Selection',
-      desc: 'Exceptional grass-fed lamb sourced from the pristine pastures of New Zealand and Australia, ensuring a clean flavor profile and unmatched tenderness.',
+      title: t.products.title,
+      subtitle: t.products.cuts.lamb.title,
+      desc: t.products.cuts.lamb.desc,
       image: '/daging/Lamb Rack.webp',
       items: ['Lamb Rack', 'Lamb Leg', 'Lamb Shoulder', 'Lamb Loin', 'Lamb Shank', 'Lamb Ribs', 'Lamb Flap', 'Lamb Chops', 'Lamb Rump']
     },
     secondary: {
-      title: 'Our Product',
-      subtitle: 'Executive Secondary Cuts',
-      desc: 'Versatile and immensely flavorful cuts favored by executive chefs for artisanal slow-roasting, gourmet braising, and signature stock preparations.',
+      title: t.products.title,
+      subtitle: t.products.cuts.secondary.title,
+      desc: t.products.cuts.secondary.desc,
       image: '/daging/Chuck.webp',
       items: ['Chuck', 'Blade', 'Rump Steak', 'Inter Costal', 'Neck', 'Shin', 'Brisket', 'Flank', 'Tri Tip', 'Knuckle', 'Topside', 'Silverside', 'Rump']
     }
@@ -74,8 +76,8 @@ export function ProductsSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}} 
             transition={{ duration: 0.8 }}
           >
-            <span className="font-normal text-[#1A1A1A]">Superior </span>
-            <span className="font-medium text-[#1A1A1A]">Meat Catalog</span>
+            <span className="font-normal text-[#1A1A1A]">{t.products.title.split(' ')[0]} </span>
+            <span className="font-medium text-[#1A1A1A]">{t.products.title.split(' ').slice(1).join(' ')}</span>
           </motion.h2>
           
           <motion.div
@@ -118,7 +120,7 @@ export function ProductsSection() {
               >
                 <div className="flex items-center gap-4 mb-8">
                   <div className="flex items-center gap-3 border border-[#E5E5E5] rounded-full px-5 py-2">
-                    <span className="text-[12px] uppercase tracking-[0.2em] text-[#1A1A1A] font-medium">Category Highlights</span>
+                    <span className="text-[12px] uppercase tracking-[0.2em] text-[#1A1A1A] font-medium">{t.products.subtitle}</span>
                   </div>
                 </div>
                 {/* Use p instead of h4 to fix heading hierarchy */}

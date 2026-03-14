@@ -1,10 +1,16 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, setLanguage, t } = useLanguage();
+
+  const toggleLanguage = () => {
+    setLanguage(language === 'id' ? 'en' : 'id');
+  };
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -21,12 +27,12 @@ export function Navigation() {
   };
 
   const navLinks = [
-    { label: 'Home', id: 'home' },
-    { label: 'About', id: 'about' },
-    { label: 'Products', id: 'products' },
-    { label: 'Clients', id: 'clients' },
-    { label: 'Facility', id: 'warehouse' },
-    { label: 'Contact', id: 'contact' },
+    { label: t.nav.home, id: 'home' },
+    { label: t.nav.about, id: 'about' },
+    { label: t.nav.products, id: 'products' },
+    { label: t.nav.clients, id: 'clients' },
+    { label: t.nav.facility, id: 'warehouse' },
+    { label: t.nav.contact, id: 'contact' },
   ];
 
   return (
@@ -66,8 +72,18 @@ export function Navigation() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >
-                Minta Penawaran
+                {t.nav.quote}
               </motion.button>
+              
+              {/* Language Switcher Desktop */}
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center gap-2 text-[13px] font-medium text-[#1A1A1A] hover:text-[#0071C1] transition-colors bg-white/50 px-3 py-1.5 rounded-full border border-black/5"
+                aria-label="Toggle Language"
+              >
+                <Globe className="w-4 h-4" />
+                <span className="uppercase">{language}</span>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -115,8 +131,18 @@ export function Navigation() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
               >
-                Minta Penawaran
+                {t.nav.quote}
               </motion.button>
+              
+              {/* Language Switcher Mobile */}
+              <button
+                onClick={toggleLanguage}
+                className="mt-6 flex items-center justify-center gap-2 text-[14px] font-medium text-[#1A1A1A] hover:text-[#0071C1] transition-colors bg-black/5 px-6 py-3 rounded-full w-full"
+                aria-label="Toggle Language"
+              >
+                <Globe className="w-5 h-5" />
+                <span className="uppercase">{language === 'id' ? 'English' : 'Indonesia'}</span>
+              </button>
             </div>
           </motion.div>
         )}

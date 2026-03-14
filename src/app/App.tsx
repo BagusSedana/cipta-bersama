@@ -9,23 +9,26 @@ import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { SEO } from './components/SEO';
 import { FloatingWA } from './components/ui/FloatingWA';
+import { LanguageProvider } from '../i18n/LanguageContext';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#F8F5EF]" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-      <SEO />
-      <Navigation />
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <ProductsSection />
-        <ClientsSection />
-        <MarketSection />
-        <WarehouseSection />
-        <ContactSection />
-      </main>
-      <Footer />
-      <FloatingWA />
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen bg-[#F8F5EF]" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+        <SEO />
+        <Navigation />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <ProductsSection />
+          <ClientsSection />
+          <MarketSection />
+          <WarehouseSection />
+          <ContactSection />
+        </main>
+        <Footer />
+        <FloatingWA />
+      </div>
+    </LanguageProvider>
   );
 }

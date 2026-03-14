@@ -1,5 +1,6 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
+import { useLanguage } from '../../i18n/LanguageContext';
 
 // 15 real client logos uploaded by user
 const logos = [
@@ -52,6 +53,7 @@ function MarqueeRow({ items, reverse = false }: { items: typeof logos; reverse?:
 }
 
 export function ClientsSection() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
@@ -68,13 +70,16 @@ export function ClientsSection() {
         >
           <div className="flex items-center mb-8">
             <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center">
-              <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Partnership</span>
+              <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.clients.subtitle}</span>
             </div>
           </div>
           
-          <h2 className="text-[#1A1A1A] font-bold" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
-             Gastronomy Leaders
+          <h2 className="text-[#1A1A1A] font-bold pb-2" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+             {t.clients.title}
           </h2>
+          <p className="text-[16px] lg:text-[18px] text-[#666666] max-w-2xl font-light mt-4">
+             {t.clients.desc}
+          </p>
         </motion.div>
       </div>
 
