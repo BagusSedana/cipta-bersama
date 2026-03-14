@@ -101,8 +101,8 @@ export function WarehouseSection() {
 
       <div className="w-full h-[50vh] min-h-[400px] border-t border-gray-100 grayscale hover:grayscale-0 transition-all duration-700">
         <iframe 
-          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Jalan%20Raya%20Kavling%20DPR%20No%2049,%20Jakarta,%20Indonesia&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
-          title="Lokasi Gudang Cipta Bersama - Jalan Raya Kavling DPR No 49, Jakarta"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=House%20of%20Spices%20And%20Pasta&amp;t=&amp;z=16&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" 
+          title="Lokasi Gudang Cipta Bersama - House of Spices And Pasta"
           width="100%" 
           height="100%" 
           style={{ border: 0 }} 

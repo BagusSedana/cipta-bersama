@@ -63,7 +63,7 @@ export function ContactSection() {
             >
               <div className="font-bold text-[24px] text-[#1A1A1A] tracking-tight">Mitra B2B Eksklusif</div>
               <p className="text-[18px] leading-[1.6] text-[#666666] font-light">
-                 Fasilitas <span className="text-[#0071C1] font-bold">Pembayaran Tempo</span> hingga 30 hari.
+                 Fasilitas <span className="text-[#0071C1] font-bold">Pembayaran Tempo</span> 14 Hari.
               </p>
             </motion.div>
           </div>
