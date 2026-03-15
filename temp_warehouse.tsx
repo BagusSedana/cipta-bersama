@@ -1,20 +1,22 @@
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
 import { MapPin, Building2, Truck, Ruler } from 'lucide-react';
-import { useLanguage } from '../../i18n/LanguageContext';
 
 export function WarehouseSection() {
-  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
-
+  const metrics = [
+    { value: '5,000+', unit: 'SQM', label: 'Storage Area' },
+    { value: '-18┬░C', unit: '', label: 'Cold Storage Temp' },
+    { value: '300+', unit: 'Orders', label: 'Per Day Capacity' },
+  ];
 
   const facilities = [
-    { icon: Building2, title: t.warehouse.facilities[0].title, desc: t.warehouse.facilities[0].desc },
-    { icon: Truck, title: t.warehouse.facilities[1].title, desc: t.warehouse.facilities[1].desc },
-    { icon: Ruler, title: t.warehouse.facilities[2].title, desc: t.warehouse.facilities[2].desc },
-    { icon: MapPin, title: t.warehouse.facilities[3].title, desc: t.warehouse.facilities[3].desc },
+    { icon: Building2, title: 'Premium Frozen Meat Supply', desc: 'Providing high-quality frozen meat products with freshness you can trust.' },
+    { icon: Truck, title: 'Cold Chain Delivery', desc: 'Efficient logistic system and modern storage technology to maintain quality.' },
+    { icon: Ruler, title: 'Custom Portion & Individual Ready', desc: 'Serving the specific needs of restaurants, modern markets, cafes, and hotels.' },
+    { icon: MapPin, title: 'Quality & Safety Assurance', desc: 'Strict selection, sorting, and distribution process in accordance with food safety standards.' },
   ];
 
   return (
@@ -23,19 +25,44 @@ export function WarehouseSection() {
       {/* VERIFIED FACILITY IMAGE - NO WHITE OVERLAYS */}
       <div className="relative w-full h-[60vh] lg:h-[80vh] overflow-hidden bg-[#0A0A0A]">
         <img
-          src="/coldStorageCb.png"
+          src="/coldStorage.webp"
           alt="Cipta Bersama Premium Cold Storage Logistics Jakarta"
           className="w-full h-full object-cover opacity-70"
           width={1920}
           height={1080}
           loading="lazy"
           decoding="async"
-          sizes="(max-width: 1024px) 100vw, 100vw"
         />
         {/* Dark Vignette only at the bottom for text visibility */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-
+        {/* Floating metrics on image */}
+        <div className="absolute bottom-20 lg:bottom-32 left-0 right-0 z-20">
+          <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
+            <div className="flex flex-wrap gap-12 lg:gap-24">
+              {metrics.map((m, i) => (
+                <motion.div
+                  key={m.label}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.8, delay: 0.5 + i * 0.15, ease: "easeOut" }}
+                  className="group cursor-default"
+                >
+                  <div className="flex items-baseline gap-1">
+                    <span 
+                      className="text-[48px] lg:text-[72px] font-medium text-white leading-none drop-shadow-2xl" 
+                      style={{ letterSpacing: '-0.04em' }}
+                    >
+                      {m.value}
+                    </span>
+                    {m.unit && <span className="text-[18px] text-[#8DC63F] font-bold group-hover:scale-125 transition-transform duration-500">{m.unit}</span>}
+                  </div>
+                  <p className="text-[12px] text-white/90 uppercase tracking-[0.3em] font-medium mt-2 group-hover:text-white transition-all duration-500">{m.label}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-24 lg:py-40 relative z-10 bg-white">
@@ -43,37 +70,16 @@ export function WarehouseSection() {
           <div className="lg:col-span-5">
             <motion.div className="flex items-center mb-8" initial={{ opacity: 0, x: -30 }} animate={isInView ? { opacity: 1, x: 0 } : {}} transition={{ duration: 0.8 }}>
               <div className="border border-[#E5E5E5] rounded-full px-5 py-2 inline-flex items-center">
-                <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.warehouse.subtitle}</span>
+                <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">Our Services</span>
               </div>
             </motion.div>
             <motion.h2 className="font-light text-[#1A1A1A] mb-10" style={{ fontSize: 'clamp(3rem, 5.5vw, 5.5rem)', letterSpacing: '-0.04em', lineHeight: 1 }} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 1, delay: 0.2 }}>
-              {(() => {
-                const titleStr = t.warehouse.title;
-                // Specifically format to match Compro's break and color
-                if (titleStr.toLowerCase().includes('comprehensive meat solutions')) {
-                  return (
-                    <>
-                      <span className="font-medium text-[#1A1A1A]">Comprehensive</span>
-                      <br/>
-                      <span className="font-medium text-[#0071C1]">Meat Solutions</span>
-                    </>
-                  );
-                }
-                
-                // Fallback for ID translations to render as half-and-half if needed
-                const words = titleStr.split(' ');
-                const mid = Math.floor(words.length / 2);
-                return (
-                  <>
-                    <span className="font-medium text-[#1A1A1A]">{words.slice(0, mid).join(' ')}</span><br/>
-                    <span className="font-medium text-[#0071C1]">{words.slice(mid).join(' ')}</span>
-                  </>
-                );
-              })()}
+              Comprehensive <br />
+              <span className="font-medium text-[#0071C1]">Meat Solutions</span>
             </motion.h2>
             <div className="mt-16 pt-16 border-t border-gray-100">
               <p className="text-[18px] lg:text-[20px] leading-[1.8] text-[#555555] font-light">
-                {t.warehouse.desc}
+                We go beyond supplying premium meats; we partner with your business to provide tailored solutions, from custom portioning to flawless cold-chain delivery.
               </p>
             </div>
           </div>
