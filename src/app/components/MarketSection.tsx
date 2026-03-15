@@ -24,7 +24,16 @@ export function MarketSection() {
                 <span className="text-[12px] font-bold uppercase tracking-[0.3em] text-[#0071C1]">{t.market.subtitle}</span>
               </div>
             <h2 className="font-light text-[#1A1A1A] mb-8" style={{ fontSize: 'clamp(3rem, 5vw, 5rem)', letterSpacing: '-0.03em', lineHeight: 1.1 }}>
-              <span className="font-medium text-[#1A1A1A]">{t.market.title}</span>
+              {(() => {
+                const words = t.market.title.split(' ');
+                const mid = Math.ceil(words.length / 2);
+                return (
+                  <>
+                    <span className="font-medium text-[#1A1A1A]">{words.slice(0, mid).join(' ')} </span>
+                    <span className="font-medium text-[#0071C1]">{words.slice(mid).join(' ')}</span>
+                  </>
+                );
+              })()}
             </h2>
             <p className="text-[18px] lg:text-[20px] leading-[1.6] text-[#555555] font-light max-w-lg mb-10">
               {t.market.desc}

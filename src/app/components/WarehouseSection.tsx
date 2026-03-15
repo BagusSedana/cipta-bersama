@@ -76,7 +76,27 @@ export function WarehouseSection() {
               </div>
             </motion.div>
             <motion.h2 className="font-light text-[#1A1A1A] mb-10" style={{ fontSize: 'clamp(3rem, 5.5vw, 5.5rem)', letterSpacing: '-0.04em', lineHeight: 1 }} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 1, delay: 0.2 }}>
-              <span className="font-medium text-[#0071C1]">{t.warehouse.title}</span>
+              {(() => {
+                const titleStr = t.warehouse.title;
+                // Specifically format to match Compro's break and color
+                if (titleStr.toLowerCase().includes('comprehensive meat solutions')) {
+                  return (
+                    <>
+                      <span className="font-medium text-[#0071C1]">Comprehensive <br/> Meat Solutions</span>
+                    </>
+                  );
+                }
+                
+                // Fallback for ID translations to render as half-and-half if needed
+                const words = titleStr.split(' ');
+                const mid = Math.floor(words.length / 2);
+                return (
+                  <>
+                    <span className="font-medium text-[#1A1A1A]">{words.slice(0, mid).join(' ')}</span><br/>
+                    <span className="font-medium text-[#0071C1]">{words.slice(mid).join(' ')}</span>
+                  </>
+                );
+              })()}
             </motion.h2>
             <div className="mt-16 pt-16 border-t border-gray-100">
               <p className="text-[18px] lg:text-[20px] leading-[1.8] text-[#555555] font-light">

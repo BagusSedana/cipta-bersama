@@ -45,8 +45,27 @@ export function HeroSection() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
           >
-            {t.hero.title1} <br className="hidden md:block"/>
-            <span className="font-medium text-[#0071C1]">{t.hero.title2}</span>
+            {(() => {
+              const title1 = t.hero.title1;
+              const title2 = t.hero.title2;
+              
+              if (title1 === 'Eminent Purveyor for Gastronomic' && title2 === 'Excellence') {
+                return (
+                  <>
+                    <span className="text-[#1A1A1A]">Eminent Purveyor</span>
+                    <br className="hidden md:block"/>
+                    <span className="font-medium text-[#0071C1]">for Gastronomic<br/>Excellence</span>
+                  </>
+                );
+              }
+              
+              return (
+                <>
+                  <span className="text-[#1A1A1A]">{title1}</span> <br className="hidden md:block"/>
+                  <span className="font-medium text-[#0071C1]">{title2}</span>
+                </>
+              );
+            })()}
           </motion.h1>
 
           <motion.p

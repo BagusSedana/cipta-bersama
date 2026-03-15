@@ -43,7 +43,25 @@ export function ContactSection() {
                 style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', letterSpacing: '-0.02em', lineHeight: 1.1 }}
                 initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6, delay: 0.1 }}
               >
-                <span className="font-bold text-[#0071C1]">{t.contact.title}</span>
+                {(() => {
+                  const titleStr = t.contact.title;
+                  if (titleStr.toLowerCase().includes('establish a strategic partnership')) {
+                    return (
+                      <>
+                        <span className="font-medium text-[#0071C1]">Establish a <br/> Strategic Partnership</span>
+                      </>
+                    );
+                  }
+
+                  const words = titleStr.split(' ');
+                  const mid = Math.ceil(words.length / 2);
+                  return (
+                    <>
+                      <span className="font-medium text-[#1A1A1A]">{words.slice(0, mid).join(' ')}</span><br/>
+                      <span className="font-medium text-[#0071C1]">{words.slice(mid).join(' ')}</span>
+                    </>
+                  );
+                })()}
               </motion.h2>
 
               <motion.p
