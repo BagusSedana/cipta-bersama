@@ -90,6 +90,12 @@ export const translations = {
         message: 'Detail Your Exquisite Requirements',
         submit: 'TRANSMIT INQUIRY',
         whatsapp: 'Initiate Priority Dialogue'
+      },
+      promo: {
+        title: 'Exclusive B2B Alliance',
+        desc1: 'Facilities',
+        desc2: 'Terms of Payment',
+        desc3: '14 Days.'
       }
     },
     footer: {
@@ -196,6 +202,12 @@ export const translations = {
         message: 'Rincikan Kebutuhan Eksklusif Anda',
         submit: 'TRANSMISIKAN PERMOHONAN',
         whatsapp: 'Inisiasi Dialog Prioritas'
+      },
+      promo: {
+        title: 'Mitra B2B Eksklusif',
+        desc1: 'Fasilitas',
+        desc2: 'Pembayaran Tempo',
+        desc3: '14 Hari.'
       }
     },
     footer: {

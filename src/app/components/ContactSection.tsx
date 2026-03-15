@@ -48,7 +48,9 @@ export function ContactSection() {
                   if (titleStr.toLowerCase().includes('establish a strategic partnership')) {
                     return (
                       <>
-                        <span className="font-medium text-[#0071C1]">Establish a <br/> Strategic Partnership</span>
+                        <span className="font-medium text-[#1A1A1A]">Establish a</span>
+                        <br/>
+                        <span className="font-medium text-[#0071C1]">Strategic Partnership</span>
                       </>
                     );
                   }
@@ -80,9 +82,9 @@ export function ContactSection() {
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <div className="font-bold text-[24px] text-[#1A1A1A] tracking-tight">Mitra B2B Eksklusif</div>
+              <div className="font-bold text-[24px] text-[#1A1A1A] tracking-tight">{t.contact.promo.title}</div>
               <p className="text-[18px] leading-[1.6] text-[#666666] font-light">
-                 Fasilitas <span className="text-[#0071C1] font-bold">Pembayaran Tempo</span> 14 Hari.
+                 {t.contact.promo.desc1} <span className="text-[#0071C1] font-bold">{t.contact.promo.desc2}</span> {t.contact.promo.desc3}
               </p>
             </motion.div>
           </div>

@@ -82,7 +82,9 @@ export function WarehouseSection() {
                 if (titleStr.toLowerCase().includes('comprehensive meat solutions')) {
                   return (
                     <>
-                      <span className="font-medium text-[#0071C1]">Comprehensive <br/> Meat Solutions</span>
+                      <span className="font-medium text-[#1A1A1A]">Comprehensive</span>
+                      <br/>
+                      <span className="font-medium text-[#0071C1]">Meat Solutions</span>
                     </>
                   );
                 }
