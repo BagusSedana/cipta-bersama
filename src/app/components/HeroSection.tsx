@@ -104,9 +104,7 @@ export function HeroSection() {
           <div className="grid grid-cols-2 lg:flex lg:flex-nowrap items-start justify-between gap-6 lg:gap-8 w-full">
              {[
                { val: "15+", label: t.hero.stat1, d: 0.4 },
-               { val: "900+", label: t.hero.stat2, d: 0.5 },
-               { val: "50+", label: t.hero.stat3, d: 0.6 },
-               { val: "100%", label: t.hero.stat4, d: 0.7 }
+               { val: "50+", label: t.hero.stat3, d: 0.6 }
              ].map((stat, i) => (
                <motion.div 
                  key={i}

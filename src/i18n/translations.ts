@@ -167,12 +167,12 @@ export const translations = {
     clients: {
       subtitle: 'Aliansi Terkemuka',
       title: 'Dipercaya oleh Para Visioner Industri',
-      desc: 'Pengejaran kami yang tak kenal lelah akan kesempurnaan telah mengukuhkan posisi kami sebagai mitra pilihan bagi konsorsium kuliner dan ritel paling bergengsi di Indonesia.'
+      desc: 'Pengejaran kami yang tak kenal lelah akan telah mengukuhkan posisi kami sebagai Mitra bisnis seperti hotel moderen retail, industri kuliner, restoran, cafe dan hotel.'
     },
     market: {
       subtitle: 'Market Presence',
       title: 'Mendukung Seluruh Ekosistem F&B',
-      desc: 'Kami meredefinisikan rantai pasokan untuk barisan terdepan mahakarya kuliner di Indonesia.',
+      desc: 'Kami meredefinisikan rantai pasokan untuk industri kuliner di Indonesia.',
       sectors: [
         { title: 'Restaurant', desc: 'Klaster Fine Dining & Kasual' },
         { title: 'Hotel', desc: 'Hospitalitas Mewah Internasional' },

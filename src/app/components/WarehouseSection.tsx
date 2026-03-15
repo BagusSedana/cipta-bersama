@@ -8,11 +8,7 @@ export function WarehouseSection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
 
-  const metrics = [
-    { value: '5,000+', unit: 'SQM', label: 'Storage Area' },
-    { value: '-18°C', unit: '', label: 'Cold Storage Temp' },
-    { value: '300+', unit: 'Orders', label: 'Per Day Capacity' },
-  ];
+
 
   const facilities = [
     { icon: Building2, title: t.warehouse.facilities[0].title, desc: t.warehouse.facilities[0].desc },
@@ -39,33 +35,7 @@ export function WarehouseSection() {
         {/* Dark Vignette only at the bottom for text visibility */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-        {/* Floating metrics on image */}
-        <div className="absolute bottom-20 lg:bottom-32 left-0 right-0 z-20">
-          <div className="max-w-[1440px] mx-auto px-6 lg:px-12">
-            <div className="flex flex-wrap gap-12 lg:gap-24">
-              {metrics.map((m, i) => (
-                <motion.div
-                  key={m.label}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  transition={{ duration: 0.8, delay: 0.5 + i * 0.15, ease: "easeOut" }}
-                  className="group cursor-default"
-                >
-                  <div className="flex items-baseline gap-1">
-                    <span 
-                      className="text-[48px] lg:text-[72px] font-medium text-white leading-none drop-shadow-2xl" 
-                      style={{ letterSpacing: '-0.04em' }}
-                    >
-                      {m.value}
-                    </span>
-                    {m.unit && <span className="text-[18px] text-[#8DC63F] font-bold group-hover:scale-125 transition-transform duration-500">{m.unit}</span>}
-                  </div>
-                  <p className="text-[12px] text-white/90 uppercase tracking-[0.3em] font-medium mt-2 group-hover:text-white transition-all duration-500">{m.label}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </div>
+
       </div>
 
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 py-24 lg:py-40 relative z-10 bg-white">
