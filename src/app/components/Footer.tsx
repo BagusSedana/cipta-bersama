@@ -8,24 +8,6 @@ export function Footer() {
 
   const footerLinks = [
     {
-      title: t.footer.nav.products,
-      links: [
-        { name: t.products.cuts.prime.title, href: '#products' },
-        { name: t.products.cuts.lamb.title, href: '#products' },
-        { name: t.products.cuts.secondary.title, href: '#products' },
-        { name: t.products.cuts.custom.title, href: '#products' }
-      ]
-    },
-    {
-      title: t.footer.nav.company,
-      links: [
-        { name: t.nav.about, href: '#about' },
-        { name: t.nav.facility, href: '#warehouse' },
-        { name: t.nav.clients, href: '#clients' },
-        { name: t.nav.contact, href: '#contact' }
-      ]
-    },
-    {
       title: t.footer.nav.legal,
       links: [
         { name: 'Privacy Policy', href: '#' },
@@ -60,10 +42,6 @@ export function Footer() {
                   aria-label="Cipta Bersama - Premium Meat Supplier Logo" 
                 />
               </div>
-              
-              <p className="text-[16px] leading-[1.8] mb-12 max-w-sm text-gray-400 font-light">
-                {t.footer.desc}
-              </p>
             </div>
 
             <div className="w-full">
