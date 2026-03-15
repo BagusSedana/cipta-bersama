@@ -16,7 +16,7 @@ function preloadCategoryImages(items: string[], defaultImage: string) {
   setTimeout(() => {
     items.forEach(item => {
       const i = new Image();
-      i.src = `/daging/${item === 'T-Bone' ? 'T Bone' : item}.webp`;
+      i.src = `/daging/${item === 'T-Bone' ? 'T Bone' : item}.png`;
     });
   }, 200);
 }
@@ -39,21 +39,21 @@ export function ProductsSection() {
       title: t.products.title,
       subtitle: t.products.cuts.prime.title,
       desc: t.products.cuts.prime.desc,
-      image: '/daging/Sirloin.webp',
+      image: '/daging/Sirloin.png',
       items: ['Tenderloin', 'Striploin', 'T-Bone', 'Chuck Eye Roll', 'Short Rib', 'Sirloin', 'Ribeye', 'Top Sirloin', 'Flat Iron']
     },
     lamb: {
       title: t.products.title,
       subtitle: t.products.cuts.lamb.title,
       desc: t.products.cuts.lamb.desc,
-      image: '/daging/Lamb Leg.webp',
+      image: '/daging/Lamb Leg.png',
       items: ['Lamb Rack', 'Lamb Leg', 'Lamb Shoulder', 'Lamb Loin', 'Lamb Shank', 'Lamb Ribs', 'Lamb Flap', 'Lamb Chops', 'Lamb Rump']
     },
     secondary: {
       title: t.products.title,
       subtitle: t.products.cuts.secondary.title,
       desc: t.products.cuts.secondary.desc,
-      image: '/daging/Topside.webp',
+      image: '/daging/Topside.png',
       items: ['Chuck', 'Blade', 'Rump Steak', 'Inter Costal', 'Neck', 'Shin', 'Brisket', 'Flank', 'Tri Tip', 'Knuckle', 'Topside', 'Silverside', 'Rump', 'Silver']
     }
   };
@@ -177,7 +177,7 @@ export function ProductsSection() {
                 className="w-full h-[500px] lg:h-[800px] overflow-hidden rounded-3xl bg-[#F6F5F2] flex items-center justify-center"
               >
                 <img
-                  src={activeItem ? `/daging/${activeItem === 'T-Bone' ? 'T Bone' : activeItem}.webp` : activeData.image}
+                  src={activeItem ? `/daging/${activeItem === 'T-Bone' ? 'T Bone' : activeItem}.png` : activeData.image}
                   alt={activeItem || activeData.subtitle}
                   className="w-full h-full object-cover filter drop-shadow-xl hover:scale-110 transition-transform duration-1000 ease-out"
                   width={800}
