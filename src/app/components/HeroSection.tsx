@@ -2,7 +2,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { useRef } from 'react';
 import { useLanguage } from '../../i18n/LanguageContext';
 
-export function HeroSection() {
+export function HeroSection({ isLoaded = true }: { isLoaded?: boolean }) {
   const { t } = useLanguage();
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -22,9 +22,9 @@ export function HeroSection() {
           
           <div className="overflow-hidden mb-6">
             <motion.div
-              initial={false}
-              animate={{ y: 0 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
             >
               <button className="border border-[#0071C1]/20 bg-[#0071C1]/5 hover:bg-[#0071C1]/10 rounded-full px-5 py-2 inline-flex items-center transition-colors cursor-default">
                 <span className="text-[12px] uppercase tracking-[0.3em] text-[#0071C1] font-bold">{t.hero.subtitle}</span>
@@ -40,9 +40,9 @@ export function HeroSection() {
               letterSpacing: '-0.04em',
               fontWeight: 300
             }}
-            initial={false}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={isLoaded ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             {(() => {
               const title1 = t.hero.title1;
@@ -77,18 +77,18 @@ export function HeroSection() {
 
           <motion.p
             className="text-[#555555] text-[18px] lg:text-[22px] leading-[1.6] mb-14 max-w-2xl font-light"
-            initial={false}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={isLoaded ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.6 }}
           >
             {t.hero.quote}
           </motion.p>
 
           <motion.div 
             className="flex flex-wrap items-center gap-6 mb-24"
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.8 }}
           >
             <button onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })} className="group bg-[#1A1A1A] text-white px-8 py-3.5 lg:px-10 lg:py-4 rounded-full font-medium text-[13px] uppercase tracking-widest hover:bg-[#0071C1] transition-all duration-500 shadow-lg flex items-center justify-center gap-3">
               {t.hero.btnExplore}
@@ -107,9 +107,9 @@ export function HeroSection() {
                <motion.div 
                  key={i}
                  className="flex flex-col gap-2"
-                 initial={false}
-                 animate={{ opacity: 1, y: 0 }}
-                 transition={{ duration: 0.8, delay: stat.d }}
+                 initial={{ opacity: 0, y: 30 }}
+                 animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+                 transition={{ duration: 0.8, delay: 1.0 + stat.d }}
                >
                  <div className="text-[36px] lg:text-[52px] font-medium text-[#1A1A1A] leading-none" style={{ letterSpacing: '-0.04em' }}>
                    {stat.val}

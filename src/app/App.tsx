@@ -23,24 +23,34 @@ export default function App() {
         <SEO />
         <Navigation />
         <main>
-          <HeroSection />
+          <HeroSection isLoaded={!isLoading} />
           <AboutSection />
           <ProductsSection />
           <ClientsSection />
           <MarketSection />
 
-          {/* Restored Cold Storage Image Banner */}
-          <section className="w-full h-[60vh] lg:h-[80vh] overflow-hidden bg-[#0A0A0A]">
+          {/* Restored Cold Storage Image Banner with Text */}
+          <section className="relative w-full h-[60vh] lg:h-[80vh] overflow-hidden bg-[#0A0A0A] flex items-center justify-center">
             <img
               src="/coldStorageCb.png"
               alt="Cipta Bersama Premium Cold Storage Logistics Jakarta"
-              className="w-full h-full object-cover opacity-70"
+              className="absolute inset-0 w-full h-full object-cover opacity-60"
               width={1920}
               height={1080}
               loading="lazy"
               decoding="async"
               sizes="(max-width: 1024px) 100vw, 100vw"
             />
+            {/* Overlay Gradient */}
+            <div className="absolute inset-0 bg-black/40" />
+            
+            {/* Superimposed Text */}
+            <div className="relative z-10 text-center px-6">
+              <h3 className="text-white font-light tracking-wider text-[24px] lg:text-[36px] mb-2">Cold Storage Capacity</h3>
+              <p className="text-[#0071C1] font-medium text-[48px] lg:text-[72px] tracking-tighter leading-none">
+                -21°C <span className="text-white text-[24px] lg:text-[36px] font-light mx-2">to</span> -22°C
+              </p>
+            </div>
           </section>
 
           {/* Map Location Section Restored */}
