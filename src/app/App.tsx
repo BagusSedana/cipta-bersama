@@ -10,11 +10,16 @@ import { Footer } from './components/Footer';
 import { SEO } from './components/SEO';
 import { FloatingWA } from './components/ui/FloatingWA';
 import { LanguageProvider } from '../i18n/LanguageContext';
+import { LoadingScreen } from './components/LoadingScreen';
+import { useState } from 'react';
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-[#F8F5EF]" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+      <div className={`min-h-screen bg-[#F8F5EF] ${isLoading ? 'h-screen overflow-hidden' : ''}`} style={{ fontFamily: 'DM Sans, sans-serif' }}>
+        <LoadingScreen onLoadingComplete={() => setIsLoading(false)} />
         <SEO />
         <Navigation />
         <main>

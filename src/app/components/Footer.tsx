@@ -25,8 +25,8 @@ export function Footer() {
         {/* Top Section: Brand & Links Grid */}
         <div className="grid border-b border-[#222222] pb-16 lg:grid-cols-12 gap-16 lg:gap-12">
           
-          {/* Brand & Newsletter (Col 1-4) */}
-          <div className="lg:col-span-4 pr-0 lg:pr-8 flex flex-col justify-between">
+          {/* Brand & Newsletter (Col 1-5) */}
+          <div className="lg:col-span-5 pr-0 xl:pr-12 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-5 mb-10">
                 <div 
@@ -67,8 +67,8 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Links (Col 5-12) */}
-          <div className="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-12 lg:gap-8 pt-2">
+          {/* Links (Col 6-12) */}
+          <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-8 pt-2">
             {footerLinks.map((section) => (
               <div key={section.title}>
                 <p className="font-bold text-[11px] mb-8 tracking-[0.2em] uppercase text-gray-500">
