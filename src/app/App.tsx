@@ -4,7 +4,7 @@ import { AboutSection } from './components/AboutSection';
 import { ProductsSection } from './components/ProductsSection';
 import { ClientsSection } from './components/ClientsSection';
 import { MarketSection } from './components/MarketSection';
-import { WarehouseSection } from './components/WarehouseSection';
+
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { SEO } from './components/SEO';
@@ -23,7 +23,7 @@ export default function App() {
           <ProductsSection />
           <ClientsSection />
           <MarketSection />
-          <WarehouseSection />
+
           <ContactSection />
         </main>
         <Footer />

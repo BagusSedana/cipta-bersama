@@ -61,9 +61,7 @@ export function HeroSection() {
               if (title1 === 'Supply' && title2 === 'Daging Impor') {
                 return (
                   <>
-                    <span className="text-[#1A1A1A] inline-block">Supply</span>
-                    <br className="hidden md:block"/>
-                    <span className="font-medium text-[#0071C1] inline-block -mt-1 lg:-mt-2">Daging Impor</span>
+                    <span className="text-[#1A1A1A] inline-block">Supply Daging Impor</span>
                   </>
                 );
               }
@@ -101,7 +99,7 @@ export function HeroSection() {
             </button>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:flex lg:flex-nowrap items-start justify-between gap-6 lg:gap-8 w-full">
+          <div className="flex flex-wrap lg:flex-nowrap items-start justify-start gap-16 lg:gap-24 w-full">
              {[
                { val: "15+", label: t.hero.stat1, d: 0.4 },
                { val: "50+", label: t.hero.stat3, d: 0.6 }
