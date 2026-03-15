@@ -13,8 +13,8 @@ export const translations = {
     },
     hero: {
       subtitle: 'Premium Meats Since 2008',
-      title1: 'Eminent Purveyor',
-      title2: 'for Gastronomic Excellence',
+      title1: 'Premium Imported',
+      title2: 'Beef Supply',
       quote: '"Cipta Bersama - Unwavering Commitment to Dispensing Frozen Meats of Unparalleled Caliber and Sensorial Brilliance."',
       btnExplore: 'EXPLORE MASTERPIECES',
       btnCorporate: 'CORPORATE INQUIRIES',
@@ -125,8 +125,8 @@ export const translations = {
     },
     hero: {
       subtitle: 'Daging Premium Sejak 2008',
-      title1: 'Penyedia Paripurna',
-      title2: 'untuk Ekselensi Gastronomi',
+      title1: 'Supply Daging Impor',
+      title2: 'Sapi Premium',
       quote: '"Cipta Bersama - Dedikasi Tanpa Kompromi dalam Mendistribusikan Daging Beku dengan Kaliber dan Sensasi Rasa yang Tak Tertandingi."',
       btnExplore: 'JELAJAHI MAHAKARYA',
       btnCorporate: 'KONSULTASI KORPORAT',

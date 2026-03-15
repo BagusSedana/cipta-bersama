@@ -26,10 +26,9 @@ export function HeroSection() {
               animate={{ y: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
-              <div className="flex items-center gap-3">
-                <div className="h-[2px] w-8 bg-[#0071C1]" />
-                <span className="text-[12px] uppercase tracking-[0.4em] text-[#0071C1] font-medium">{t.hero.subtitle}</span>
-              </div>
+              <button className="border border-[#0071C1]/20 bg-[#0071C1]/5 hover:bg-[#0071C1]/10 rounded-full px-5 py-2 inline-flex items-center transition-colors cursor-default">
+                <span className="text-[12px] uppercase tracking-[0.3em] text-[#0071C1] font-bold">{t.hero.subtitle}</span>
+              </button>
             </motion.div>
           </div>
 
@@ -49,22 +48,22 @@ export function HeroSection() {
               const title1 = t.hero.title1;
               const title2 = t.hero.title2;
               
-              if (title1 === 'Eminent Purveyor' && title2 === 'for Gastronomic Excellence') {
+              if (title1 === 'Premium Imported' && title2 === 'Beef Supply') {
                 return (
                   <>
-                    <span className="text-[#1A1A1A] inline-block">Eminent Purveyor</span>
+                    <span className="text-[#1A1A1A] inline-block">Premium Imported</span>
                     <br className="hidden md:block"/>
-                    <span className="font-medium text-[#0071C1] inline-block -mt-2 lg:-mt-4">for Gastronomic Excellence</span>
+                    <span className="font-medium text-[#0071C1] inline-block -mt-1 lg:-mt-2">Beef Supply</span>
                   </>
                 );
               }
               
-              if (title1 === 'Penyedia Paripurna' && title2 === 'untuk Ekselensi Gastronomi') {
+              if (title1 === 'Supply Daging Impor' && title2 === 'Sapi Premium') {
                 return (
                   <>
-                    <span className="text-[#1A1A1A] inline-block">Penyedia Paripurna</span>
+                    <span className="text-[#1A1A1A] inline-block">Supply Daging Impor</span>
                     <br className="hidden md:block"/>
-                    <span className="font-medium text-[#0071C1] inline-block -mt-2 lg:-mt-4">untuk Ekselensi Gastronomi</span>
+                    <span className="font-medium text-[#0071C1] inline-block -mt-1 lg:-mt-2">Sapi Premium</span>
                   </>
                 );
               }

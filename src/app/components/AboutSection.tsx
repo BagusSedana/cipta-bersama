@@ -30,7 +30,7 @@ export function AboutSection() {
                }}
              >
                 <img 
-                  src="/infoGudang.png" 
+                  src="/welcome.webp" 
                   alt="Cipta Bersama - Premium Meat Supplier Jakarta" 
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                   width={800}
@@ -117,7 +117,7 @@ export function AboutSection() {
               }}
             >
               <img 
-                src="/visi.webp" 
+                src="/infoGudang.png" 
                 alt="Premium Quality Meat Preparation" 
                 className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
               />
