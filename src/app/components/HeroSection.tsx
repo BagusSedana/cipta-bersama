@@ -141,6 +141,7 @@ export function HeroSection() {
             fetchPriority="high"
             loading="eager"
             decoding="async"
+            sizes="(max-width: 1024px) 100vw, 100vw"
           />
           {/* Subtle Red Overlay */}
           <div className="absolute inset-0 bg-red-800/20 mix-blend-overlay" />

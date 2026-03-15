@@ -34,6 +34,7 @@ export function WarehouseSection() {
           height={1080}
           loading="lazy"
           decoding="async"
+          sizes="(max-width: 1024px) 100vw, 100vw"
         />
         {/* Dark Vignette only at the bottom for text visibility */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

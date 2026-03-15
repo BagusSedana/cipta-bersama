@@ -56,6 +56,9 @@ export function MarketSection() {
               src="/allMenu.webp" 
               alt="Culinary Market Reach" 
               className="w-full h-full object-cover"
+              loading="lazy"
+              decoding="async"
+              sizes="(max-width: 1024px) 100vw, 50vw"
             />
           </motion.div>
         </div>

@@ -182,7 +182,9 @@ export function ProductsSection() {
                   className="w-full h-full object-cover filter drop-shadow-xl hover:scale-110 transition-transform duration-1000 ease-out"
                   width={800}
                   height={800}
+                  loading="lazy"
                   decoding="async"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   onError={(e) => {
                     (e.target as HTMLImageElement).src = activeData.image;
                   }}
