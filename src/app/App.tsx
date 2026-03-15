@@ -24,8 +24,6 @@ export default function App() {
           <ClientsSection />
           <MarketSection />
 
-          <ContactSection />
-          
           {/* Map Location Section Restored */}
           <section className="w-full h-[50vh] min-h-[400px] border-t border-gray-100 grayscale hover:grayscale-0 transition-all duration-700">
             <iframe 
@@ -38,6 +36,8 @@ export default function App() {
               loading="lazy">
             </iframe>
           </section>
+          
+          <ContactSection />
         </main>
         <Footer />
         <FloatingWA />
