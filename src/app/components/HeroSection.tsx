@@ -52,9 +52,9 @@ export function HeroSection() {
               if (title1 === 'Eminent Purveyor' && title2 === 'for Gastronomic Excellence') {
                 return (
                   <>
-                    <span className="text-[#1A1A1A]">Eminent Purveyor</span>
+                    <span className="text-[#1A1A1A] inline-block">Eminent Purveyor</span>
                     <br className="hidden md:block"/>
-                    <span className="font-medium text-[#0071C1]">for Gastronomic Excellence</span>
+                    <span className="font-medium text-[#0071C1] inline-block -mt-2 lg:-mt-4">for Gastronomic Excellence</span>
                   </>
                 );
               }
@@ -62,9 +62,9 @@ export function HeroSection() {
               if (title1 === 'Penyedia Paripurna' && title2 === 'untuk Ekselensi Gastronomi') {
                 return (
                   <>
-                    <span className="text-[#1A1A1A]">Penyedia Paripurna</span>
+                    <span className="text-[#1A1A1A] inline-block">Penyedia Paripurna</span>
                     <br className="hidden md:block"/>
-                    <span className="font-medium text-[#0071C1]">untuk Ekselensi Gastronomi</span>
+                    <span className="font-medium text-[#0071C1] inline-block -mt-2 lg:-mt-4">untuk Ekselensi Gastronomi</span>
                   </>
                 );
               }

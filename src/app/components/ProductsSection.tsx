@@ -40,21 +40,21 @@ export function ProductsSection() {
       subtitle: t.products.cuts.prime.title,
       desc: t.products.cuts.prime.desc,
       image: '/daging/Sirloin.webp',
-      items: ['Flat Iron', 'Sirloin', 'Top Sirloin']
+      items: ['Tenderloin', 'Striploin', 'T-Bone', 'Chuck Eye Roll', 'Short Rib', 'Sirloin', 'Ribeye', 'Top Sirloin', 'Flat Iron']
     },
     lamb: {
       title: t.products.title,
       subtitle: t.products.cuts.lamb.title,
       desc: t.products.cuts.lamb.desc,
       image: '/daging/Lamb Leg.webp',
-      items: ['Lamb Chops', 'Lamb Leg', 'Lamb Loin']
+      items: ['Lamb Rack', 'Lamb Leg', 'Lamb Shoulder', 'Lamb Loin', 'Lamb Shank', 'Lamb Ribs', 'Lamb Flap', 'Lamb Chops', 'Lamb Rump']
     },
     secondary: {
       title: t.products.title,
       subtitle: t.products.cuts.secondary.title,
       desc: t.products.cuts.secondary.desc,
       image: '/daging/Topside.webp',
-      items: ['Topside', 'Silver', 'Rump']
+      items: ['Chuck', 'Blade', 'Rump Steak', 'Inter Costal', 'Neck', 'Shin', 'Brisket', 'Flank', 'Tri Tip', 'Knuckle', 'Topside', 'Silverside', 'Rump', 'Silver']
     }
   };
 
