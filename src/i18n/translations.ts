@@ -126,7 +126,7 @@ export const translations = {
     hero: {
       subtitle: 'Daging Premium Sejak 2008',
       title1: 'Supply',
-      title2: 'Daging Impor',
+      title2: 'Daging Impor - Lokal',
       quote: '"Cipta Bersama - Dedikasi Tanpa Kompromi dalam Mendistribusikan Daging Beku dengan Kaliber dan Sensasi Rasa yang Tak Tertandingi."',
       btnExplore: 'JELAJAHI MAHAKARYA',
       btnCorporate: 'KONSULTASI KORPORAT',
