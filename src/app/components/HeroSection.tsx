@@ -48,22 +48,22 @@ export function HeroSection() {
               const title1 = t.hero.title1;
               const title2 = t.hero.title2;
               
-              if (title1 === 'Premium Imported' && title2 === 'Beef Supply') {
+              if (title1 === 'Imported' && title2 === 'Meat Supply') {
                 return (
                   <>
-                    <span className="text-[#1A1A1A] inline-block">Premium Imported</span>
+                    <span className="text-[#1A1A1A] inline-block">Imported</span>
                     <br className="hidden md:block"/>
-                    <span className="font-medium text-[#0071C1] inline-block -mt-1 lg:-mt-2">Beef Supply</span>
+                    <span className="font-medium text-[#0071C1] inline-block -mt-1 lg:-mt-2">Meat Supply</span>
                   </>
                 );
               }
               
-              if (title1 === 'Supply Daging Impor' && title2 === 'Sapi Premium') {
+              if (title1 === 'Supply' && title2 === 'Daging Impor') {
                 return (
                   <>
-                    <span className="text-[#1A1A1A] inline-block">Supply Daging Impor</span>
+                    <span className="text-[#1A1A1A] inline-block">Supply</span>
                     <br className="hidden md:block"/>
-                    <span className="font-medium text-[#0071C1] inline-block -mt-1 lg:-mt-2">Sapi Premium</span>
+                    <span className="font-medium text-[#0071C1] inline-block -mt-1 lg:-mt-2">Daging Impor</span>
                   </>
                 );
               }
