@@ -15,11 +15,11 @@ export function HeroSection({ isLoaded = true }: { isLoaded?: boolean }) {
 
   return (
     <section id="home" className="bg-[#FFFFFF] overflow-hidden relative pt-20 lg:pt-28" ref={containerRef}>
-      
+
       {/* Top Text Content Area */}
       <div className="max-w-[1440px] mx-auto px-6 lg:px-12 relative z-20 mb-12 lg:mb-20">
         <div className="max-w-4xl">
-          
+
           <div className="overflow-hidden mb-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -47,28 +47,28 @@ export function HeroSection({ isLoaded = true }: { isLoaded?: boolean }) {
             {(() => {
               const title1 = t.hero.title1;
               const title2 = t.hero.title2;
-              
+
               if (title1 === 'Imported' && title2 === 'Meat Supply') {
                 return (
                   <>
                     <span className="text-[#1A1A1A] inline-block">Imported</span>
-                    <br className="hidden md:block"/>
+                    <br className="hidden md:block" />
                     <span className="font-medium text-[#0071C1] inline-block -mt-1 lg:-mt-2">Meat Supply</span>
                   </>
                 );
               }
-              
+
               if (title1 === 'Supply' && title2 === 'Daging Impor') {
                 return (
                   <>
-                    <span className="text-[#1A1A1A] inline-block">Supply Daging Impor</span>
+                    <span className="text-[#1A1A1A] inline-block">Supply Daging Impor - Lokal</span>
                   </>
                 );
               }
 
               return (
                 <>
-                  <span className="text-[#1A1A1A]">{title1}</span> <br className="hidden md:block"/>
+                  <span className="text-[#1A1A1A]">{title1}</span> <br className="hidden md:block" />
                   <span className="font-medium text-[#0071C1]">{title2}</span>
                 </>
               );
@@ -84,7 +84,7 @@ export function HeroSection({ isLoaded = true }: { isLoaded?: boolean }) {
             {t.hero.quote}
           </motion.p>
 
-          <motion.div 
+          <motion.div
             className="flex flex-wrap items-center gap-6 mb-24"
             initial={{ opacity: 0, y: 30 }}
             animate={isLoaded ? { opacity: 1, y: 0 } : {}}
@@ -100,23 +100,23 @@ export function HeroSection({ isLoaded = true }: { isLoaded?: boolean }) {
           </motion.div>
 
           <div className="flex flex-wrap lg:flex-nowrap items-start justify-start gap-16 lg:gap-24 w-full">
-             {[
-               { val: "15+", label: t.hero.stat1, d: 0.4 },
-               { val: "50+", label: t.hero.stat3, d: 0.6 }
-             ].map((stat, i) => (
-               <motion.div 
-                 key={i}
-                 className="flex flex-col gap-2"
-                 initial={{ opacity: 0, y: 30 }}
-                 animate={isLoaded ? { opacity: 1, y: 0 } : {}}
-                 transition={{ duration: 0.8, delay: 1.0 + stat.d }}
-               >
-                 <div className="text-[36px] lg:text-[52px] font-medium text-[#1A1A1A] leading-none" style={{ letterSpacing: '-0.04em' }}>
-                   {stat.val}
-                 </div>
-                 <div className="text-[11px] text-[#0071C1] font-medium uppercase tracking-[0.2em]">{stat.label}</div>
-               </motion.div>
-             ))}
+            {[
+              { val: "15+", label: t.hero.stat1, d: 0.4 },
+              { val: "50+", label: t.hero.stat3, d: 0.6 }
+            ].map((stat, i) => (
+              <motion.div
+                key={i}
+                className="flex flex-col gap-2"
+                initial={{ opacity: 0, y: 30 }}
+                animate={isLoaded ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 1.0 + stat.d }}
+              >
+                <div className="text-[36px] lg:text-[52px] font-medium text-[#1A1A1A] leading-none" style={{ letterSpacing: '-0.04em' }}>
+                  {stat.val}
+                </div>
+                <div className="text-[11px] text-[#0071C1] font-medium uppercase tracking-[0.2em]">{stat.label}</div>
+              </motion.div>
+            ))}
           </div>
 
         </div>
@@ -128,7 +128,7 @@ export function HeroSection({ isLoaded = true }: { isLoaded?: boolean }) {
         style={{ y }}
       >
         <div className="w-full h-[500px] lg:h-[850px] relative overflow-hidden bg-[#1A1A1A]">
-          <img 
+          <img
             src="/hero.webp"
             alt="Premium Raw Beef Purveyor Cipta Bersama Jakarta"
             className="w-full h-full object-cover"

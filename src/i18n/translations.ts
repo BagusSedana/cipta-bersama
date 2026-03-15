@@ -14,7 +14,7 @@ export const translations = {
     hero: {
       subtitle: 'Premium Meats Since 2008',
       title1: 'Imported',
-      title2: 'Meat Supply',
+      title2: 'Meat Supply - Local',
       quote: '"Cipta Bersama - Unwavering Commitment to Dispensing Frozen Meats of Unparalleled Caliber and Sensorial Brilliance."',
       btnExplore: 'EXPLORE MASTERPIECES',
       btnCorporate: 'CORPORATE INQUIRIES',
