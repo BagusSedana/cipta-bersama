@@ -29,6 +29,20 @@ export default function App() {
           <ClientsSection />
           <MarketSection />
 
+          {/* Restored Cold Storage Image Banner */}
+          <section className="w-full h-[60vh] lg:h-[80vh] overflow-hidden bg-[#0A0A0A]">
+            <img
+              src="/coldStorageCb.png"
+              alt="Cipta Bersama Premium Cold Storage Logistics Jakarta"
+              className="w-full h-full object-cover opacity-70"
+              width={1920}
+              height={1080}
+              loading="lazy"
+              decoding="async"
+              sizes="(max-width: 1024px) 100vw, 100vw"
+            />
+          </section>
+
           {/* Map Location Section Restored */}
           <section className="w-full h-[50vh] min-h-[400px] border-t border-gray-100 grayscale hover:grayscale-0 transition-all duration-700">
             <iframe 
