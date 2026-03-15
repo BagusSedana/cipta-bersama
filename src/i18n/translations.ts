@@ -138,14 +138,14 @@ export const translations = {
     about: {
       subtitle: 'Introduction',
       title: 'Supply Daging Impor',
-      p1: 'Di Cipta Bersama Company, kami berpegang teguh pada komitmen absolut untuk mendistribusikan produk daging beku dengan kualitas supremasi dan kesegaran yang terjamin. Melalui fokus pada pengadaan yang berkelanjutan, metode pemrosesan termutakhir, serta kendali mutu yang ketat, kami mendedikasikan diri untuk menyediakan produk yang tidak hanya memuaskan selera, namun juga menjamin keamanan dan reliabilitas di tingkat tertinggi.',
-      p2: 'Korporasi kami didirikan pada tahun 2008, menghadirkan spektrum luas produk sapi dan domba impor berkualitas premium yang bersumber dari Amerika Serikat, Selandia Baru, Australia, dan Brasil. Kami berdedikasi penuh untuk menyajikan kepuasan maksimal bagi klien kami. Selain itu, kami secara menyeluruh melayani kebutuhan restoran, pasar modern, kafe, dan mahligai perhotelan.',
+      p1: 'Di Cipta Bersama Company, kami berpegang teguh pada komitmen absolut untuk mendistribusikan produk daging beku dengan kualitas supremasi dan kesegaran yang terjamin. Melalui fokus pada pengadaan yang berkelanjutan, metode pemrosesan terbaik, serta kendali mutu yang terbaik, kami mendedikasikan diri untuk menyediakan produk yang tidak hanya memuaskan selera, namun juga menjamin keamanan dan reliabilitas di tingkat tertinggi.',
+      p2: 'Korporasi kami didirikan pada tahun 2008, menghadirkan spektrum luas produk sapi dan domba impor berkualitas yang bersumber dari Amerika Serikat, Selandia Baru, Australia, dan Brasil. Kami berdedikasi penuh untuk menyajikan kepuasan maksimal bagi klien kami. Selain itu, kami secara menyeluruh melayani kebutuhan restoran, pasar modern, kafe, dan mahligai perhotelan.',
       vision: {
         title: 'Vision & Mission',
         subtitle1: 'Vision',
-        desc1: 'Menjadi korporasi pemasok daging terdepan, diakui secara luas atas konsistensi kaliber produknya, kesegaran yang terjaga sempurna, dan kepercayaan absolut dari klien. Kami senantiasa berkomitmen untuk menyajikan daging yang memenuhi standar premium internasional.',
+        desc1: 'Menjadi korporasi pemasok daging terdepan, diakui secara luas atas konsistensi kaliber produknya, kesegaran yang terjaga sempurna, dan kepercayaan dari klien. Kami senantiasa berkomitmen untuk menyajikan daging yang memenuhi standar premium internasional.',
         subtitle2: 'Mission',
-        desc2: 'Kami berupaya keras untuk menyediakan daging berkualitas tanpa kompromi kepada seluruh klien, mulai dari ranah rumah tangga dan restoran hingga industri kuliner, dengan memastikan bahwa setiap produk melewati proses seleksi, penyortiran, dan distribusi yang luar biasa ketat sesuai dengan standar keamanan pangan global. Korporasi memfokuskan diri pada penjagaan kesegaran dan mutu daging melalui teknologi penyimpanan avant-garde dan sistem logistik berefisiensi tinggi.'
+        desc2: 'Kami berupaya keras untuk menyediakan daging berkualitas tanpa kompromi kepada seluruh klien, mulai dari ranah rumah tangga dan restoran hingga industri kuliner, dengan memastikan bahwa setiap produk melewati proses seleksi, penyortiran, dan distribusi yang sesuai dengan standar keamanan pangan global.'
       },
       values: {
         title: 'Our Value',
