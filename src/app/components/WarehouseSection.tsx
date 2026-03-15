@@ -27,7 +27,7 @@ export function WarehouseSection() {
       {/* VERIFIED FACILITY IMAGE - NO WHITE OVERLAYS */}
       <div className="relative w-full h-[60vh] lg:h-[80vh] overflow-hidden bg-[#0A0A0A]">
         <img
-          src="/coldStorage.webp"
+          src="/coldStorageCb.png"
           alt="Cipta Bersama Premium Cold Storage Logistics Jakarta"
           className="w-full h-full object-cover opacity-70"
           width={1920}

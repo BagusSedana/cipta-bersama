@@ -21,11 +21,11 @@ export const translations = {
       stat1: 'Years of Prominence',
       stat2: 'Elite Alliances',
       stat3: 'Exquisite Curations',
-      stat4: 'Certified Provenance'
+      stat4: 'Quality Assured'
     },
     about: {
       subtitle: 'Introduction',
-      title: 'About Us',
+      title: 'Premium Imported Beef Supply',
       p1: 'At Cipta Bersama Company, we are committed to delivering the highest-quality frozen meat products with freshness you can trust. With a focus on sustainable sourcing, modern processing methods, and strict quality control, we strive to provide products that not only satisfy the palate but also ensure safety and reliability.',
       p2: 'Our company was established in 2008 and offers a wide range of high-quality imported beef and lamb products sourced from the United States, New Zealand, Australia, and Brazil. We are committed to providing maximum satisfaction to our customers. In addition, we also serve the needs of restaurants, modern markets, cafes, and hotels.',
       vision: {
@@ -133,11 +133,11 @@ export const translations = {
       stat1: 'Tahun Dominasi',
       stat2: 'Kemitraan Elit',
       stat3: 'Kurasi Spesifik',
-      stat4: 'Sertifikasi Keaslian'
+      stat4: 'Sertifikasi Mutu'
     },
     about: {
       subtitle: 'Introduction',
-      title: 'About Us',
+      title: 'Supply Daging Impor Sapi Premium',
       p1: 'Di Cipta Bersama Company, kami berpegang teguh pada komitmen absolut untuk mendistribusikan produk daging beku dengan kualitas supremasi dan kesegaran yang terjamin. Melalui fokus pada pengadaan yang berkelanjutan, metode pemrosesan termutakhir, serta kendali mutu yang ketat, kami mendedikasikan diri untuk menyediakan produk yang tidak hanya memuaskan selera, namun juga menjamin keamanan dan reliabilitas di tingkat tertinggi.',
       p2: 'Korporasi kami didirikan pada tahun 2008, menghadirkan spektrum luas produk sapi dan domba impor berkualitas premium yang bersumber dari Amerika Serikat, Selandia Baru, Australia, dan Brasil. Kami berdedikasi penuh untuk menyajikan kepuasan maksimal bagi klien kami. Selain itu, kami secara menyeluruh melayani kebutuhan restoran, pasar modern, kafe, dan mahligai perhotelan.',
       vision: {

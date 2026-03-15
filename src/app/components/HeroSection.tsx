@@ -107,7 +107,7 @@ export function HeroSection() {
                { val: "15+", label: t.hero.stat1, d: 0.4 },
                { val: "900+", label: t.hero.stat2, d: 0.5 },
                { val: "50+", label: t.hero.stat3, d: 0.6 },
-               { val: "Halal", label: t.hero.stat4, d: 0.7 }
+               { val: "100%", label: t.hero.stat4, d: 0.7 }
              ].map((stat, i) => (
                <motion.div 
                  key={i}
