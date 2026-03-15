@@ -59,6 +59,16 @@ export function HeroSection() {
                 );
               }
               
+              if (title1 === 'Penyedia Paripurna' && title2 === 'untuk Ekselensi Gastronomi') {
+                return (
+                  <>
+                    <span className="text-[#1A1A1A]">Penyedia Paripurna</span>
+                    <br className="hidden md:block"/>
+                    <span className="font-medium text-[#0071C1]">untuk Ekselensi<br/>Gastronomi</span>
+                  </>
+                );
+              }
+
               return (
                 <>
                   <span className="text-[#1A1A1A]">{title1}</span> <br className="hidden md:block"/>
@@ -92,7 +102,7 @@ export function HeroSection() {
             </button>
           </motion.div>
 
-          <div className="grid grid-cols-2 lg:flex lg:flex-wrap items-start gap-10 lg:gap-28">
+          <div className="grid grid-cols-2 lg:flex lg:flex-nowrap items-start justify-between gap-6 lg:gap-8 w-full">
              {[
                { val: "15+", label: t.hero.stat1, d: 0.4 },
                { val: "900+", label: t.hero.stat2, d: 0.5 },
