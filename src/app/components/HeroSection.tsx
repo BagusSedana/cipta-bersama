@@ -49,12 +49,12 @@ export function HeroSection() {
               const title1 = t.hero.title1;
               const title2 = t.hero.title2;
               
-              if (title1 === 'Eminent Purveyor for Gastronomic' && title2 === 'Excellence') {
+              if (title1 === 'Eminent Purveyor' && title2 === 'for Gastronomic Excellence') {
                 return (
                   <>
                     <span className="text-[#1A1A1A]">Eminent Purveyor</span>
                     <br className="hidden md:block"/>
-                    <span className="font-medium text-[#0071C1]">for Gastronomic<br/>Excellence</span>
+                    <span className="font-medium text-[#0071C1]">for Gastronomic Excellence</span>
                   </>
                 );
               }
@@ -64,7 +64,7 @@ export function HeroSection() {
                   <>
                     <span className="text-[#1A1A1A]">Penyedia Paripurna</span>
                     <br className="hidden md:block"/>
-                    <span className="font-medium text-[#0071C1]">untuk Ekselensi<br/>Gastronomi</span>
+                    <span className="font-medium text-[#0071C1]">untuk Ekselensi Gastronomi</span>
                   </>
                 );
               }
